@@ -1,7 +1,7 @@
-
+ 
 html { 
 	
-  background: url(page1.jpg) no-repeat center center fixed;           /*for scaling background image*/ 
+   background: url(page1.jpg) no-repeat center center fixed;          /*  for scaling background image  */
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -49,18 +49,22 @@ h1{
 	color: #ffcc00;
 	font-size: 16px;
 }
-.loginbox input[type="submit"]
+.new1, .loginbox input[type="submit"]
 {
 	margin-top: 8px;
 	border:none;
 	outline: none;
 	height: 40px;
+	width: 100%;
+	font-size: 16px;
+  	margin: 4px;
+	text-align: center;
 	background: #ffcc00;
 	color: #fff;
 	font-size: 18px;
 	border-radius: 20px;
 }
-.loginbox input[type="submit"]:hover
+.new1:hover, .loginbox input[type="submit"]:hover
 {
 	cursor: pointer;
 	background: #cca300;
@@ -74,4 +78,87 @@ h1{
 }
 .loginbox a:hover{
 	color:#ffcc00;
+} 
+
+.form-label-group {
+  position: relative;
+  margin-bottom: -0.5rem;
+}
+
+.form-label-group > input,
+.form-label-group > label {
+  height: 3.125rem;
+  position: relative;
+  top: -1rem;
+  /* padding: .75rem; */
+} 
+
+ .form-label-group > label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  margin-bottom: 0; /* Override default `<label>` margin */
+  line-height: 1.5;
+  color: #fff;
+  pointer-events: none;
+   cursor: text;  /*Match the input under the label */
+   border: 1px solid transparent;
+  border-radius: .25rem;
+  transition: all .1s ease-in-out;
+}
+
+.form-label-group input::-webkit-input-placeholder {
+  color:  #cca300;
+} 
+
+ .form-label-group input:-ms-input-placeholder {
+  color:  #cca300;
+}
+
+.form-label-group input::-ms-input-placeholder {
+  color:  #cca300;
+}
+
+.form-label-group input::-moz-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::placeholder {
+  color: transparent;
+} 
+
+.form-label-group input:not(:placeholder-shown) {
+  padding-top: 1.25rem;
+  padding-bottom: .25rem;
+} 
+
+.form-label-group input:not(:placeholder-shown) ~ label {
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  font-size: 12px;
+  color: #777;
+}
+
+/* Fallback for Edge
+-------------------------------------------------- */
+@supports (-ms-ime-align: auto) {
+  .form-label-group > label {
+    display: none;
+  }
+  .form-label-group input::-ms-input-placeholder {
+    color: #777;
+  }
+}
+
+/* Fallback for IE
+-------------------------------------------------- */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .form-label-group > label {
+    display: none;
+  }
+  .form-label-group input:-ms-input-placeholder {
+    color: #777;
+  }
 }
