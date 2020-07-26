@@ -7,10 +7,13 @@ html {
   -o-background-size: cover;
   background-size: cover;
 }
+.form-forgot-signup{
+	margin-top: 20px;
+}
 .loginbox{
 	border-radius: 2%;
 	width: 320px;
-	height: 470px;
+	height: 505px;
 	background: #003d66;
 	color: #fff;
 	top: 50%;
@@ -26,6 +29,7 @@ html {
 	margin-top: -50px;
 }
 h1{
+	color: #ffcc00;
 	text-align: center;
 	margin: 0;
 	padding: 0 0 20px;
