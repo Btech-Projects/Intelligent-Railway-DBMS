@@ -1,0 +1,59 @@
+html { 
+	
+   background: url(images/background.jpg) no-repeat center center fixed;          /*  for scaling background image  */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+body{
+	margin:0;
+}
+
+header{
+	background: #003d66;
+	color: white;
+	padding: 8px 0px 10px 40px;
+	height:45px;
+	font-weight: bold;
+}
+header h1{
+	color: #ffcc00;
+	display: inline;
+	font-family: sans-serif;
+	font-weight: 400;
+	font-size: 40px;
+	float: left;
+	margin-top: 0px;
+	margin-right: 30px;
+}
+nav ul{
+	display:inline;
+	padding: 0px;
+	float: left;
+}
+
+nav ul li{
+	font-family: sans-serif;
+	display: inline-block;
+	list-style-type: none;
+	color: white;
+	float: left;
+	margin-left: 30px;
+	font-weight: bold;
+
+}
+nav ul li a {
+	color:  white;
+	text-decoration: none;
+}
+.divider{
+	background-color: #ffcc00;
+	height: 5px;
+}
+
+.homeyellow:hover{
+	background-color: #ffcc00;
+	padding: 32px 12px 19px 12px;
+
+}
