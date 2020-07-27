@@ -5,6 +5,7 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  font-family: 'helvetica neue';
 }
 .logo{
 	border-radius: 50%;

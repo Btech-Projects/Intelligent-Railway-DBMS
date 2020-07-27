@@ -6,6 +6,7 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  font-family: 'helvetica neue';
 }
 .form-forgot-signup{
 	margin-top: 20px;
