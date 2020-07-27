@@ -13,7 +13,7 @@ html {
 .loginbox{
 	border-radius: 2%;
 	width: 350px;
-	height: 600px;
+	height: 500px;
 	background: #003d66;
 	color: #fff;
 	top: 50%;
@@ -22,6 +22,7 @@ html {
 	transform: translate(-50%,-50%);
 	box-sizing: border-box;
 	padding: 70px 30px;
+	opacity: 90%;
 }
 .logo{
 	border-radius: 50%;
