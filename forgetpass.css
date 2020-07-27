@@ -114,7 +114,6 @@ h1{
   border-radius: .25rem;
   transition: all .1s ease-in-out;
 }
-
 .form-label-group input::-webkit-input-placeholder {
   color:  #cca300;
 } 
