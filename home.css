@@ -1,6 +1,6 @@
 html { 
 	
-   background: url(page1.jpg) no-repeat center center fixed;          /*  for scaling background image  */
+   background: url(background.jpg) no-repeat center center fixed;          /*  for scaling background image  */
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
