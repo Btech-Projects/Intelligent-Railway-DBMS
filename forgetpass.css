@@ -1,0 +1,9 @@
+html { 
+	
+    background: url(images/background.jpg) no-repeat center center fixed;          /*  for scaling background image  */
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+ }
+ 
