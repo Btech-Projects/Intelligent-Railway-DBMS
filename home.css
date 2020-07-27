@@ -6,6 +6,13 @@ html {
   -o-background-size: cover;
   background-size: cover;
 }
+.logo{
+	border-radius: 50%;
+	float: left;
+	margin-left: 0px;
+	margin-right: 40px;
+	margin-top: 2px;
+}
 body{
 	margin:0;
 }
