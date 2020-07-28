@@ -35,7 +35,7 @@ html {
      animation-duration: 5s;
      border-radius: 2%;
      width: 350px;
-     height: 500px;
+     height: 550px;
      background: #003d66;
      color: #fff;
      top: 50%;
@@ -75,7 +75,7 @@ html {
      border-bottom: 1px solid #fff;
      background: transparent;
      outline: none;
-     height:40;
+     height:20;
      color: #ffcc00;
      font-size: 16px;
  }
