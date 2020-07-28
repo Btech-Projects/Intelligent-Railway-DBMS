@@ -1,0 +1,33 @@
+body { 
+	background: url(images/background.jpg) no-repeat center center fixed;          /*  for scaling background image  */
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+ }
+h1{
+    text-align: center;
+    color: white;
+    background: #003d66;
+    height: 100px;
+}
+.abc{
+    width: 38rem;
+    margin-top: 160px;
+}
+.frr{
+    margin: 20px;
+    height: 30pxs;
+    width: 565px;
+}
+.abc{
+    background: #003d66;
+}
+.loginbox{
+	animation-name: animation;
+	animation-duration: 5s;
+	border-radius: 2%;
+	background: #003d66;
+	color: #fff;
+	
+}
