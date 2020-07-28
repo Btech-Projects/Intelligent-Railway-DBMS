@@ -11,6 +11,8 @@ html {
 	margin-top: 20px;
 }
 .loginbox{
+	animation-name: animation;
+	animation-duration: 3s;
 	border-radius: 2%;
 	width: 400px;
 	height: 631px;
@@ -24,6 +26,26 @@ html {
 	padding: 70px 30px;
 	opacity: 90%;
 }
+@keyframes animation {
+    0% {
+      opacity: 10%;
+    }
+  
+    25% {
+        opacity: 50%;
+    }
+  
+    50% {
+  opacity: 70%;
+	} 
+	75%{
+		opacity:80%;
+	}   
+  
+    100% {
+      opacity: 90%;
+    }
+  }
 .logo{
 	border-radius: 50%;
 	margin-left: 41%;
