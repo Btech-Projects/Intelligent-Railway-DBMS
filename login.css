@@ -8,10 +8,32 @@ html {
   background-size: cover;
   font-family: 'helvetica neue';
 }
+@keyframes animation {
+    0% {
+      opacity: 10%;
+    }
+  
+    25% {
+        opacity: 50%;
+    }
+  
+    50% {
+  opacity: 70%;
+	} 
+	75%{
+		opacity:80%;
+	}   
+  
+    100% {
+      opacity: 90%;
+    }
+  }
 .form-forgot-signup{
 	margin-top: 20px;
 }
 .loginbox{
+	animation-name: animation;
+	animation-duration: 5s;
 	border-radius: 2%;
 	width: 350px;
 	height: 500px;
