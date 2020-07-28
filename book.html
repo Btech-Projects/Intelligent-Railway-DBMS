@@ -1,56 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title> 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="style5.css">
+	<title>Book Ticket</title>
+	<link rel="icon" 
+      type="image/png" 
+      href="images/logo.png" >
+	<link rel="stylesheet" type="text/css" href="book.css">
+	<link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/floating-labels/">
+	<link href="/docs/4.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<style>
+		.bd-placeholder-img {
+		  font-size: 1.125rem;
+		  text-anchor: middle;
+		  -webkit-user-select: none;
+		  -moz-user-select: none;
+		  -ms-user-select: none;
+		  user-select: none;
+		}
+  
+		@media (min-width: 767px) {
+		  .bd-placeholder-img-lg {
+			font-size: 3.5rem;
+		  }
+		}
+	  </style> 
+	  <!-- Custom styles for this template -->
+	   <link href="login.css" rel="stylesheet">
 </head>
 <body>
-    <h1 class="display-3 main">
-        Book Your Ticket
-    </h1>
-    <div class="container" style="text-cen">
-        <div class="card mx-auto text-centre abc">
-           <div class="loginbox">
-            <img src="images/railroaders-dribbble_1x.jpg" class="card-img-top" alt="...">
-            <input autocomplete="off" class="ui-inputtext ui-widget ui-state-default ui-corner-all ui-autocomplete-input ng-star-inserted frr" type="text" placeholder="From*">
-            <input autocomplete="off" class="ui-inputtext ui-widget ui-state-default ui-corner-all ui-autocomplete-input ng-star-inserted frr" type="text" placeholder="To*">
-            <input autocomplete="off" type="text" class="ng-tns-c12-5 ui-inputtext ui-widget ui-state-default ui-corner-all ng-star-inserted frr" placeholder="Journey Date(dd-mm-yyyy)*">
-            <div class="card-body">
-              <div _ngcontent-c9="" class="form-group">
-                <style type="text/css">     
-                    select {
-                        width:565px;
-                    }
-                </style>
-                  <p-dropdown _ngcontent-c9="" formcontrolname="journeyClass" id="journeyClass" class="ng-tns-c11-6 ui-inputwrapper-filled ng-pristine ng-valid ng-touched">
-                      <div class="ng-tns-c11-6 ui-dropdown ui-widget ui-state-default ui-corner-all ui-helper-clearfix" style="width: 178px;">
-                        <!---->
-                        <div class="ui-helper-hidden-accessible ng-tns-c11-6 ng-star-inserted">
-                            <select class="ng-tns-c11-6" aria-hidden="true" tabindex="-1" aria-label="All Classes">
-                                <!---->
-                                <option class="ng-tns-c11-6 ng-star-inserted">
-                                    All Classes
-                                </option>
-                                <!----><!----><!----><!---->
-                                <option class="ng-tns-c11-6 ng-star-inserted" value="">All Classes</option><option class="ng-tns-c11-6 ng-star-inserted" value="EA">Anubhuti Class (EA)</option><option class="ng-tns-c11-6 ng-star-inserted" value="1A">AC First Class (1A) </option><option class="ng-tns-c11-6 ng-star-inserted" value="EC">Exec. Chair Car (EC)</option><option class="ng-tns-c11-6 ng-star-inserted" value="2A">AC 2 Tier (2A)</option><option class="ng-tns-c11-6 ng-star-inserted" value="FC">First Class (FC)</option><option class="ng-tns-c11-6 ng-star-inserted" value="3A">AC 3 Tier (3A)</option><option class="ng-tns-c11-6 ng-star-inserted" value="3E">AC 3 Economy (3E)</option><option class="ng-tns-c11-6 ng-star-inserted" value="CC">AC Chair car (CC)</option><option class="ng-tns-c11-6 ng-star-inserted" value="SL">Sleeper (SL)</option><option class="ng-tns-c11-6 ng-star-inserted" value="2S">Second Sitting (2S)</option><!---->
-                            </select>
-                        </div>
-                    </p-dropdown>
-                </div>
-                <br>
-                <br>
-            </div>
-            <div class="card-body mx-auto btt">
-                <a href="#" class="btn btn-warning card-link " style="width: 360px;">Card link</a>
-            </div>
-           </div> 
+
+    <div class ="loginbox">
+
+	<img src ="images/logo.png" class ="logo"height="40px" width="50px">
+	<h1>Book Your Ticket</h1>
+
+	<form class="form-label-group">
+
+		<div class="form-label-group">
+			<input type="text" class="form-control" placeholder="From*" required autofocus>
+			<label for="from">From*</label>
           </div>
-    </div>
-    <script src="js/jquery-3.5.1.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+          
+		<div class="form-label-group">
+			<input type="text" class="form-control" placeholder="To*" required autofocus>
+			<label for="to">To*</label>
+          </div>
+    
+		<div class="form-label-group">
+            <input type="date" id="date" name="date" class="form-control">
+          </div>  
+        
+        <div class="form-label-group">  
+            
+        <select class="" aria-label="All Classes">
+            <!---->
+            <option class="ll">
+                All Classes
+            </option>
+            <!----><!----><!----><!---->
+            <option class="" value="AC">
+                All Classes
+            </option>
+            <option class="" value="EA">
+                Anubhuti Class (EA)
+            </option>
+            <option class="" value="1A">
+                AC First Class (1A) 
+            </option>
+            <option class="" value="EC">
+                Exec. Chair Car (EC)
+            </option>
+            <option class="" value="2A">
+                AC 2 Tier (2A)
+            </option>
+            <option class="" value="FC">
+                First Class (FC)
+            </option>
+            <option class="" value="3A">
+                AC 3 Tier (3A)
+            </option>
+            <option class="" value="3E">
+                AC 3 Economy (3E)
+            </option>
+            <option class="" value="CC">
+                AC Chair car (CC)
+            </option>
+            <option class="" value="SL">
+                Sleeper (SL)
+            </option>
+            <option class="" value="2S">
+                Second Sitting (2S)
+            </option>
+            <!---->
+        </select>
+        </div>
+        <br><br>
+		<p></p>
+		<!-- <input type="submit" name="" value="Login"> -->
+		<a href="#"><button type="button" class="new1">Find Trains</button><br></a>
+		<br><br><br>
+		</div>
+		
+	</form>
+
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
 </body>
-</html>
+</html> 
+
