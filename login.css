@@ -33,7 +33,7 @@ html {
 }
 .loginbox{
 	animation-name: animation;
-	animation-duration: 5s;
+	animation-duration: 3s;
 	border-radius: 2%;
 	width: 350px;
 	height: 500px;
