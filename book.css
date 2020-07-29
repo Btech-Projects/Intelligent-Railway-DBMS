@@ -8,25 +8,25 @@ html {
    font-family: 'helvetica neue';
  }
  @keyframes animation {
-     0% {
-       opacity: 10%;
-     }
-   
-     25% {
-         opacity: 50%;
-     }
-   
-     50% {
-   opacity: 70%;
-     } 
-     75%{
-         opacity:80%;
-     }   
-   
-     100% {
-       opacity: 90%;
-     }
-   }
+    0% {
+      opacity: 10%;
+    }
+  
+    25% {
+        opacity: 50%;
+    }
+  
+    50% {
+  opacity: 70%;
+	} 
+	75%{
+		opacity:80%;
+	}   
+  
+    100% {
+      opacity: 90%;
+    }
+  }
  .form-forgot-signup{
      margin-top: 20px;
  }
@@ -34,13 +34,14 @@ html {
      font-size: 25px;
      text-align: center;
      color: #ffcc00;
+     font-weight: bold;
  }
- .loginbox{
+ .bookbox{
      animation-name: animation;
-     animation-duration: 5s;
+     animation-duration: 3s;
      border-radius: 2%;
      width: 350px;
-     height: 550px;
+     height: 600px;
      background: #003d66;
      color: #fff;
      top: 50%;
@@ -49,7 +50,7 @@ html {
      transform: translate(-50%,-50%);
      box-sizing: border-box;
      padding: 70px 30px;
-     opacity: 20%;
+     opacity: 90%;
  }
  .logo{
      border-radius: 50%;
@@ -65,16 +66,16 @@ html {
      margin-top: 10px;
      font-size: 25px;
  }
- .loginbox p{
+ .bookbox p{
      margin: 0;
      padding: 0;
      font-weight: bold;
  }
- .loginbox input{
+ .bookbox input{
      width: 100%;
      margin-bottom:20px;
  }
- .loginbox input[type="text"],input[type="password"]
+ .bookbox input[type="text"],input[type="password"]
  {
      border:none;
      border-bottom: 1px solid #fff;
@@ -84,27 +85,27 @@ html {
      color: #ffcc00;
      font-size: 16px;
  }
- .loginbox input[type="date"]
+ .bookbox input[type="date"]
  {
      border:none;
      border-bottom: 1px solid #fff;
      background: transparent;
      outline: none;
      height:40;
-     color: white;
+     color: #ffcc00;
      font-size: 16px;
  }
- .loginbox select
+ .bookbox select
  {
      border:none;
      border-bottom: 1px solid #fff;
      background: transparent;
      outline: none;
      height:40;
-     color: white;
+     color: #ffcc00;
      font-size: 16px;
  }
- .loginbox option
+ .bookbox option
  {
      border:none;
      border-bottom: 1px solid #fff;
@@ -114,7 +115,7 @@ html {
      color: black;
      font-size: 16px;
  }
- .new1, .loginbox input[type="submit"]
+ .new1, .bookbox input[type="submit"]
  {
      margin-top: 8px;
      border:none;
@@ -129,19 +130,22 @@ html {
      font-size: 18px;
      border-radius: 20px;
  }
- .new1:hover, .loginbox input[type="submit"]:hover
+ .new1:hover, .bookbox input[type="submit"]:hover
  {
      cursor: pointer;
      background: #cca300;
      color:000;
  }
- .loginbox a{
+ button{
+     color: lawngreen;
+ }
+ .bookbox a{
      text-decoration: none;
      font-size: 12px;
      line-height: 20px;
      color: darkgrey;
  }
- .loginbox a:hover{
+ .bookbox a:hover{
      color:#ffcc00;
  } 
  
@@ -153,7 +157,7 @@ html {
  .form-label-group > input,
  .form-label-group > label {
    height: 3.125rem;
-   position: relative;
+   
    top: -1rem;
    /* padding: .75rem; */
  } 
@@ -227,4 +231,5 @@ html {
      color: #777;
    }
  }
+ 
  
