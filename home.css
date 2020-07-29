@@ -22,7 +22,7 @@ header{
 	background: #003d66;
 	color: white;
 	padding: 8px 0px 10px 40px;
-	height:45px;
+	height:65px;
 	font-weight: bold;
 	opacity: 90%
 }
@@ -49,6 +49,7 @@ nav ul li{
 	color: white;
 	float: left;
 	margin-left: 30px;
+	margin-top: 10px;
 	font-weight: bold;
 
 }
@@ -64,5 +65,9 @@ nav ul li a {
 .homeyellow:hover{
 	background-color: #ffcc00;
 	padding: 32px 12px 19px 12px;
-
+	border-radius: 5px;
+	text-decoration: none;
+}
+.cont{
+	width: 2800px;
 }
