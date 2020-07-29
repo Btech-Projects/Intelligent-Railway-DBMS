@@ -13,11 +13,8 @@
           .html1  { 
           margin-top: 70px;
           padding: 40px;
-        
-           /* background-color: #E4E9FD;
-               min-height: 750px;*/
-             font-family: 'helvetica neue';
-            background-image: linear-gradient( to bottom right,orange,#241c82);
+          font-family: 'helvetica neue';
+          background-image: linear-gradient( to bottom right,orange,#241c82);
           }
 
           html{
@@ -28,7 +25,7 @@
               background-size: cover;
               margin-left: 40px;
               margin-right: 40px;
-              margin-bottom: 30px;
+              margin-bottom: 40px;
           }
           .example::-webkit-scrollbar {
             display: none;
@@ -48,9 +45,7 @@
 	          <label for="inputPassword6">PNR number </label>
 	          <input type="text" id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
 	          <label for="inputPassword8">From Station </label>
-	           <input type="text" id="inputPassword8" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
-	          <!-- <label for="inputPassword7">Transaction Id</label>
-	          <input type="text" id="inputPassword7" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">    -->         
+	           <input type="text" id="inputPassword8" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">      
 	           <label  for="inputPassword9">To Station  &nbsp; &nbsp; &nbsp; </label>
 	           <input type="text" id="inputPassword9" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
 	           <label for="inputPassword6">Journey Date</label>
@@ -59,11 +54,11 @@
 	      </form>
         </div>
       <div style="align-content: center; align-items: center; position:relative;margin-left: 47%;">
-      <button  type="button" class="btn btn-primary" style="margin-bottom: 10px; margin-top: 18px; margin-left: -34px;">Search
+      <button  type="button" class="btn btn-primary" style="margin-bottom: 10px; margin-top: 18px; margin-left: 10px;">Search
         </button>
       </div> 
     <div class="progress" style="height: 55px; font-size: 20px; margin-top: 1.5rem;">
-        <div class="progress-bar bg-info" role="progressbar" style="width: 100%; color: #ffcc00; background-color: #003d66 !important;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Booked Ticket (Upcoming)</div>
+        <div class="progress-bar bg-info" role="progressbar" style="width: 100%; color: #ffcc00; background-color: #003d66 !important;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Upcoming bookings</div>
       </div>
       <div class="table-responsive">
       <table class="table table-bordered">
@@ -73,10 +68,6 @@
             <th scope="col" style="background-color: #ffcc00 !important; color: #003d66;">Name</th>
             <th scope="col" style="background-color: #ffcc00 !important; color: #003d66;">PNR No</th>
             <th scope="col" style="background-color: #ffcc00 !important; color: #003d66;">Travel Date</th>
-            <!-- <th scope="col">Select</th>
-            <th scope="col">S No</th>
-            <th scope="col">Transaction Id</th>
-            <th scope="col">PNR No</th> -->
           </tr>
         </thead>
         <tbody>
@@ -110,12 +101,13 @@
         </tbody>
       </table>
     </div>
-      <div style="margin-top: 6px; width: auto; position:relative;margin-left: 0.4%;">
-        <button  type="button" class="btn btn-success" >Cancel Ticket
-      </button>
+      <div style="margin-top: 6px; width: auto; position:relative;margin-left: 30%;">
+       <a href="home.html"><button  type="button" class="btn btn-danger" >Continue to Home
+       </button>
+      </a>
     </div>
-      <div style="margin-top: 6px; position:relative;margin-left: 72%; bottom: 2.7rem;"> 
-        <a href="home.html"><button  type="button" class="btn btn-danger">Continue to Home
+      <div style="margin-top: 6px; position:relative; margin-left: 61%;bottom: 2.7rem;"> 
+       <button  type="button" class="btn btn-success">Cancel Ticket
       </button>
       </div>
   </div>
