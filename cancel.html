@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="home.css">
     <style>
           .html1  { 
-          margin-top: 170px;
-          padding: 50px;
+          margin-top: 70px;
+          padding: 40px;
         
            /* background-color: #E4E9FD;
                min-height: 750px;*/
@@ -28,36 +28,40 @@
               background-size: cover;
               margin-left: 40px;
               margin-right: 40px;
+              margin-bottom: 30px;
           }
 
     </style>
 </head>
 <body>
     <div class="html1">
-   <!--  <div class="progress" style="height: 55px; font-size: 22px;"> -->
-       <!--  <div class="progress-bar bg-info" role="progressbar" style="width: 110%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Booked Ticket History</div>
-      </div>
-      <form class="form-inline" >
-        <div class="form-group" style="margin-top: 2rem; margin-left: 2rem;">
-          <label for="inputPassword6">PNR number </label>
-          <input type="text" id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
-          <label for="inputPassword8">From Station </label>
-            <input type="text" id="inputPassword8" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
-          <label for="inputPassword7">Transaction Id</label>
-          <input type="text" id="inputPassword7" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">            
-            <label  for="inputPassword9">To Station  &nbsp; &nbsp; &nbsp; </label>
-            <input type="text" id="inputPassword9" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
-          <label for="inputPassword6">Journey Date</label>
-          <input  type="password" id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
+
+    <div class="progress" style="height: 55px; margin-top: 1rem; font-size: 22px;">
+        <div class="progress-bar bg-info" role="progressbar" style=" width:100%; color: #ffcc00; background-color: #003d66 !important;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Search Tickets</div>
+    </div>
+        <div class="table-responsive">
+        <form class="form-inline" >
+	        <div class="form-group" style="margin-top: 2rem; margin-left: 0.5rem;">
+	          <label for="inputPassword6">PNR number </label>
+	          <input type="text" id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
+	          <label for="inputPassword8">From Station </label>
+	           <input type="text" id="inputPassword8" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
+	          <!-- <label for="inputPassword7">Transaction Id</label>
+	          <input type="text" id="inputPassword7" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">    -->         
+	           <label  for="inputPassword9">To Station  &nbsp; &nbsp; &nbsp; </label>
+	           <input type="text" id="inputPassword9" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
+	           <label for="inputPassword6">Journey Date</label>
+	           <input  type="password" id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
+	        </div>
+	      </form>
         </div>
-      </form>
       <div style="align-content: center; align-items: center;margin-left: 43rem;">
-      <button left: 42%;" type="button" class="btn btn-primary" style="margin-top: 20px;">Search
-    </button>
-    </div> -->
- 
-    <div class="progress" style="height: 40px; font-size: 20px; margin-top: 1.5rem;">
-        <div id ="one" class="progress-bar bg-info" role="progressbar" style="width: 100%; color: #ffcc00; background-color: #003d66 !important;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Booked Ticket (Upcoming)</div>
+      <button left: 42%;" type="button" class="btn btn-primary" style="margin-bottom: 10px; margin-top: 18px; margin-left: -34px;">Search
+        </button>
+    </div> 
+
+    <div class="progress" style="height: 55px; font-size: 20px; margin-top: 1.5rem;">
+        <div class="progress-bar bg-info" role="progressbar" style="width: 100%; color: #ffcc00; background-color: #003d66 !important;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Booked Ticket (Upcoming)</div>
       </div>
       <div class="table-responsive">
       <table class="table table-bordered">
@@ -81,10 +85,7 @@
             <td>Mark</td>
             <td>1234</td>
             <td>11.04.2020</td>
-           <!--  <td scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td> -->
+          
           </tr>
           <tr>
             <th scope="row"><div class="form-check">
@@ -93,10 +94,7 @@
             <td>Jacob</td>
             <td>2345</td>
             <td>05.12.2019</td>
-          <!--   <td scope="row">1</th> -->
-          <!--   <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td> -->
+         
           </tr>
           <tr>
             <th scope="row"><div class="form-check">
@@ -105,23 +103,20 @@
             <td>Larry</td>
              <td>9894</td>
             <td>29.8.2019</td>
-         <!--    <td scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td> -->
+       
           </tr>
         </tbody>
       </table>
     </div>
-      <div style=" margin-left: 450px;">
+      <div style=" margin-left: 450px; margin-top: 6px;">
         <button  type="button" class="btn btn-success" >Cancel Ticket
       </button>
      <!--  </div>
       <div class="mx-auto" style="width: 400px; margin-top: 10px"> -->
-        <a href="home.html"><button  type="button" class="btn btn-danger" style="margin-left: 240px;">Continue to Home
+        <a href="home.html"><button  type="button" class="btn btn-danger" style="margin-left: 240px; margin-top: 6px;">Continue to Home
       </button>
       </div>
-      </div>
+  </div>
     
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
