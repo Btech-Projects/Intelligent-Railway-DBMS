@@ -40,7 +40,10 @@ html {
      padding: 0px;
      
  }
- 
+ #view{
+   text-align: center;
+   color: #ffcc00;
+ }
  nav ul li{
      font-family: sans-serif;
      display: inline-block;
