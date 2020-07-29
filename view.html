@@ -27,7 +27,9 @@
               margin-right: 40px;
               margin-bottom: 30px;
           }
-
+			 .example::-webkit-scrollbar {
+			            display: none;
+			        }
     </style>
 </head>
 <body>
@@ -36,7 +38,7 @@
     <div class="progress" style="height: 55px; margin-top: 1rem; font-size: 22px;">
         <div class="progress-bar bg-info" role="progressbar" style=" width:100%; color: #ffcc00; background-color: #003d66 !important;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Search Tickets</div>
     </div>
-        <div class="table-responsive">
+        <div class="table-responsive example">
         <form class="form-inline" >
 	        <div class="form-group" style="margin-top: 2rem; margin-left: 0.5rem;">
 	          <label for="inputPassword6">PNR number </label>
@@ -51,7 +53,7 @@
 	      </form>
         </div>
       <div style="align-content: center; align-items: center;margin-left: 43rem;">
-      <button left: 42%;" type="button" class="btn btn-primary" style="margin-bottom: 10px; margin-top: 18px; margin-left: -34px;">Search
+      <button type="button" class="btn btn-primary" style="margin-bottom: 10px; margin-top: 18px; margin-left: -34px;">Search
         </button>
     </div> 
 
