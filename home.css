@@ -115,7 +115,7 @@ nav ul li a {
 	height:4rem;
 	width:20rem;
 	max-width:100%;
-	border:.5rem solid var(--color-crayon);
+	border:.5rem solid #003d66;
 	border-radius:.5rem;
 	animation: infinite alternate rainbow-fill var(--duration) ease-in-out;
 	box-sizing:border-box;
@@ -149,9 +149,9 @@ nav ul li a {
 	margin-left:-2.5%;
 	animation: infinite alternate move-marker var(--duration) ease-in-out;    
 	background:
-	  no-repeat left   0% top    / 3rem  50% linear-gradient(to bottom right, transparent, transparent 40%, var(--color-crayon) 40%),
-	  no-repeat left   0% bottom / 3rem  50% linear-gradient(to top right, transparent, transparent 40%, var(--color-crayon) 40%),
-	  no-repeat left 3rem bottom / 100% 100% linear-gradient( var(--color-crayon), var(--color-crayon))
+	  no-repeat left   0% top    / 3rem  50% linear-gradient(to bottom right, transparent, transparent 40%, #ffcc00 40%),
+	  no-repeat left   0% bottom / 3rem  50% linear-gradient(to top right, transparent, transparent 40%, #ffcc00 40%),
+	  no-repeat left 3rem bottom / 100% 100% linear-gradient( #ffcc00, #ffcc00)
   }
   
   @keyframes move-marker{
