@@ -155,7 +155,7 @@ html {
      background: transparent;
      outline: none;
      height:40;
-     color: white;
+     color: #ffcc00;
      font-size: 16px;
  }
  .loginbox select
@@ -165,7 +165,7 @@ html {
      background: transparent;
      outline: none;
      height:40;
-     color: white;
+     color: #ffcc00;
      font-size: 16px;
  }
  .loginbox option
