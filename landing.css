@@ -101,6 +101,7 @@ html {
      margin-top: 20px;
  }
  .loginbox{
+   margin-top: 30px;
      float: left;
      animation-name: animation;
      animation-duration: 5s;
