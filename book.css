@@ -75,7 +75,7 @@ html {
      width: 100%;
      margin-bottom:20px;
  }
- .bookbox input[type="text"],input[type="password"]
+ .bookbox input[type="text"]
  {
      border:none;
      border-bottom: 1px solid #fff;
@@ -116,20 +116,20 @@ html {
      font-size: 16px;
  }
  .new1, .bookbox input[type="submit"]
- {
-     margin-top: 8px;
-     border:none;
-     outline: none;
-     height: 40px;
-     width: 100%;
-     font-size: 16px;
-       margin: 4px;
-     text-align: center;
-     background: #ffcc00;
-     color: #fff;
-     font-size: 18px;
-     border-radius: 20px;
- }
+{
+	margin-top: 8px;
+	border:none;
+	outline: none;
+	height: 40px;
+	width: 100%;
+	font-size: 16px;
+  	margin: 4px;
+	text-align: center;
+	background: #ffcc00;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 20px;
+}
  .new1:hover, .bookbox input[type="submit"]:hover
  {
      cursor: pointer;
