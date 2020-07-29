@@ -10,13 +10,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="home.css">
     <style>
-          .html1 { 
-          margin-top: 70px;
+          .html1  { 
+          margin-top: 170px;
           padding: 50px;
-
+        
            /* background-color: #E4E9FD;
                min-height: 750px;*/
-               background-opacity: 90%;
              font-family: 'helvetica neue';
             background-image: linear-gradient( to bottom right,orange,#241c82);
           }
@@ -27,14 +26,16 @@
               -moz-background-size: cover;
               -o-background-size: cover;
               background-size: cover;
+              margin-left: 40px;
+              margin-right: 40px;
           }
-      }
+
     </style>
 </head>
 <body>
     <div class="html1">
-    <div class="progress" style="height: 55px; font-size: 22px;">
-        <div class="progress-bar bg-info" role="progressbar" style="width: 110%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Booked Ticket History</div>
+   <!--  <div class="progress" style="height: 55px; font-size: 22px;"> -->
+       <!--  <div class="progress-bar bg-info" role="progressbar" style="width: 110%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Booked Ticket History</div>
       </div>
       <form class="form-inline" >
         <div class="form-group" style="margin-top: 2rem; margin-left: 2rem;">
@@ -42,8 +43,8 @@
           <input type="text" id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
           <label for="inputPassword8">From Station </label>
             <input type="text" id="inputPassword8" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
-<!--           <label for="inputPassword7">Transaction Id</label>
-          <input type="text" id="inputPassword7" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">     -->        
+          <label for="inputPassword7">Transaction Id</label>
+          <input type="text" id="inputPassword7" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">            
             <label  for="inputPassword9">To Station  &nbsp; &nbsp; &nbsp; </label>
             <input type="text" id="inputPassword9" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
           <label for="inputPassword6">Journey Date</label>
@@ -53,23 +54,23 @@
       <div style="align-content: center; align-items: center;margin-left: 43rem;">
       <button left: 42%;" type="button" class="btn btn-primary" style="margin-top: 20px;">Search
     </button>
-    </div>
-
-    <div class="progress" style="height: 40px; font-size: 20px; margin-top: 3rem;">
-        <div class="progress-bar bg-info" role="progressbar" style="width: 100%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Booked Ticket</div>
+    </div> -->
+ 
+    <div class="progress" style="height: 40px; font-size: 20px; margin-top: 1.5rem;">
+        <div id ="one" class="progress-bar bg-info" role="progressbar" style="width: 100%; color: #ffcc00; background-color: #003d66 !important;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Booked Ticket (Upcoming)</div>
       </div>
       <div class="table-responsive">
       <table class="table table-bordered">
         <thead>
             <tr class="table-primary">
-            <th scope="col">Select</th>
+            <th scope="col" style="background-color: #ffcc00 !important; color: #003d66;">Select</th>
+            <th scope="col" style="background-color: #ffcc00 !important; color: #003d66;">Name</th>
+            <th scope="col" style="background-color: #ffcc00 !important; color: #003d66;">PNR No</th>
+            <th scope="col" style="background-color: #ffcc00 !important; color: #003d66;">Travel Date</th>
+            <!-- <th scope="col">Select</th>
             <th scope="col">S No</th>
             <th scope="col">Transaction Id</th>
-            <th scope="col">PNR No</th>
-            <th scope="col">Select</th>
-            <th scope="col">S No</th>
-            <th scope="col">Transaction Id</th>
-            <th scope="col">PNR No</th>
+            <th scope="col">PNR No</th> -->
           </tr>
         </thead>
         <tbody>
@@ -78,45 +79,46 @@
                 <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
               </div></th>
             <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td scope="row">1</th>
+            <td>1234</td>
+            <td>11.04.2020</td>
+           <!--  <td scope="row">1</th>
             <td>Mark</td>
             <td>Otto</td>
-            <td>@mdo</td>
+            <td>@mdo</td> -->
           </tr>
           <tr>
             <th scope="row"><div class="form-check">
                 <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
               </div></th>
             <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-            <td scope="row">1</th>
-            <td>Mark</td>
+            <td>2345</td>
+            <td>05.12.2019</td>
+          <!--   <td scope="row">1</th> -->
+          <!--   <td>Mark</td>
             <td>Otto</td>
-            <td>@mdo</td>
+            <td>@mdo</td> -->
           </tr>
           <tr>
             <th scope="row"><div class="form-check">
                 <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
               </div></th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
-            <td scope="row">1</th>
+            <td>Larry</td>
+             <td>9894</td>
+            <td>29.8.2019</td>
+         <!--    <td scope="row">1</th>
             <td>Mark</td>
             <td>Otto</td>
-            <td>@mdo</td>
+            <td>@mdo</td> -->
           </tr>
         </tbody>
       </table>
     </div>
-      <div style=" margin-left: 500px">
+      <div style=" margin-left: 450px;">
         <button  type="button" class="btn btn-success" >Cancel Ticket
       </button>
      <!--  </div>
       <div class="mx-auto" style="width: 400px; margin-top: 10px"> -->
-  <a href="home.html"><button  type="button" class="btn btn-danger" style="margin-left: 240px;">Continue to Home
+        <a href="home.html"><button  type="button" class="btn btn-danger" style="margin-left: 240px;">Continue to Home
       </button>
       </div>
       </div>
