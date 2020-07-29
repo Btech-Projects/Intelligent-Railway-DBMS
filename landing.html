@@ -5,8 +5,12 @@
       type="image/png" 
       href="images/logo.png" >
 	<title>Home Page</title>
-    <link rel="stylesheet" href="home1.css">
-    
+    <link rel="stylesheet" href="landing.css">
+    <style>
+    	#user{
+    		color: red;
+    	}
+    </style>
 </head>
 
 
@@ -22,8 +26,8 @@
 				<li><a class ="homeyellow" href="login.html">VIEW TICKET</a></li>
 				<li><a class ="homeyellow" href="login.html">PNR STATUS</a></li>
 				<li><a class ="homeyellow" href="contact.html">CONTACT US</a></li>
-				<li><a class ="homeyellow" href="login.html">LOGIN</a></li>
-				<li><a class ="homeyellow" href="signup.html">NEW USER</a></li>
+				<li><a  id = "user" class ="homeyellow" href="login.html">LOGIN</a></li>
+				<li><a  id = "user"  class ="homeyellow" href="signup.html">NEW USER</a></li>
 			</ul>
 			
 			
@@ -31,7 +35,7 @@
         <div class ="loginbox">
 
             <img src ="images/logo.png" class ="logo"height="40px" width="50px">
-            <h2>View Trains</h2>
+            <h2 id="view">FIND TRAINS</h2>
         
             <form class="form-label-group">
         
@@ -96,7 +100,7 @@
                 <br><br>
                 <p></p>
                 <!-- <input type="submit" name="" value="Login"> -->
-                <a href="#"><button type="button" class="new1">View Your Train</button><br></a>
+                <a href="#"><button type="button" class="new1">Find Your Train</button><br></a>
                 <br><br><br>
                 </div>
                 

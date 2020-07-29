@@ -9,11 +9,8 @@ html {
  }
  .logo{
      border-radius: 50%;
-     float: left;
-     margin-left: 0px;
-     margin-right: 40px;
-     margin-top: 2px;
- }
+	float: left;
+}
  body{
      margin:0;
  }
@@ -40,7 +37,10 @@ html {
      padding: 0px;
      
  }
- 
+ #view{
+   text-align: center;
+   color: #ffcc00;
+ }
  nav ul li{
      font-family: sans-serif;
      display: inline-block;
@@ -98,6 +98,7 @@ html {
      margin-top: 20px;
  }
  .loginbox{
+   margin-top: 30px;
      float: left;
      animation-name: animation;
      animation-duration: 5s;
@@ -111,7 +112,7 @@ html {
      position: absolute;
      transform: translate(-50%,-50%);
      box-sizing: border-box;
-     padding: 70px 30px;
+     padding: 85px 30px;
      opacity: 90%;
  }
  .logo{
