@@ -30,7 +30,7 @@ html {
  .form-forgot-signup{
      margin-top: 20px;
  }
- .loginbox{
+ .pnrbox{
      animation-name: animation;
      animation-duration: 5s;
      border-radius: 2%;
@@ -52,23 +52,28 @@ html {
      margin-top: -50px;
  }
  
- h3{
+ h2{
      color: #ffcc00;
      text-align: center;
      margin: 0;
      padding: 0 0 20px;
      margin-top: 10px;
  }
- .loginbox p{
+ .beltext{
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+ .pnr p{
      margin: 0;
      padding: 0;
      font-weight: bold;
  }
- .loginbox input{
+ .pnrbox input{
      width: 100%;
      margin-bottom:20px;
  }
- .loginbox input[type="text"],input[type="password"]
+ .pnrbox input[type="text"],input[type="password"]
  {
      border:none;
      border-bottom: 1px solid #fff;
@@ -78,7 +83,7 @@ html {
      color: #ffcc00;
      font-size: 16px;
  }
- .loginbox input[type="date"]
+ .pnrbox input[type="date"]
  {
      border:none;
      border-bottom: 1px solid #fff;
@@ -88,7 +93,7 @@ html {
      color: white;
      font-size: 16px;
  }
- .loginbox select
+ .pnrbox select
  {
      border:none;
      border-bottom: 1px solid #fff;
@@ -98,7 +103,7 @@ html {
      color: white;
      font-size: 16px;
  }
- .loginbox option
+ .pnrbox option
  {
      border:none;
      border-bottom: 1px solid #fff;
@@ -108,7 +113,7 @@ html {
      color: black;
      font-size: 16px;
  }
- .new1, .loginbox input[type="submit"]
+ .new1, .pnrbox input[type="submit"]
  {
      margin-top: 8px;
      border:none;
@@ -123,19 +128,19 @@ html {
      font-size: 18px;
      border-radius: 20px;
  }
- .new1:hover, .loginbox input[type="submit"]:hover
+ .new1:hover, .pnrbox input[type="submit"]:hover
  {
      cursor: pointer;
      background: #cca300;
      color:000;
  }
- .loginbox a{
+ .pnrbox a{
      text-decoration: none;
      font-size: 12px;
      line-height: 20px;
      color: darkgrey;
  }
- .loginbox a:hover{
+ .pnrbox a:hover{
      color:#ffcc00;
  } 
  
@@ -220,9 +225,4 @@ html {
    .form-label-group input:-ms-input-placeholder {
      color: #777;
    }
- }
- .beltext{
-    font-size: 1.1rem;
-    font-weight: 300;
-    line-height: 1.2;
  }
