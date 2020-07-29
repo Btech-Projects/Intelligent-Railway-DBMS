@@ -29,8 +29,10 @@
               margin-left: 40px;
               margin-right: 40px;
               margin-bottom: 30px;
-              margin-top: -4px;
           }
+          .example::-webkit-scrollbar {
+            display: none;
+        }
 
     </style>
 </head>
@@ -40,7 +42,7 @@
     <div class="progress" style="height: 55px; margin-top: 1rem; font-size: 22px;">
         <div class="progress-bar bg-info" role="progressbar" style=" width:100%; color: #ffcc00; background-color: #003d66 !important;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Search Tickets</div>
     </div>
-        <div class="table-responsive">
+        <div class="table-responsive example">
         <form class="form-inline" >
 	        <div class="form-group" style="margin-top: 2rem; margin-left: 0.5rem;">
 	          <label for="inputPassword6">PNR number </label>
@@ -57,7 +59,7 @@
 	      </form>
         </div>
       <div style="align-content: center; align-items: center;margin-left: 43rem;">
-      <button left: 42%;" type="button" class="btn btn-primary" style="margin-bottom: 10px; margin-top: 18px; margin-left: -34px;">Search
+      <button  type="button" class="btn btn-primary" style="margin-bottom: 10px; margin-top: 18px; margin-left: -34px;">Search
         </button>
     </div> 
 
@@ -110,11 +112,11 @@
       </table>
     </div>
       <div style=" margin-left: 450px; margin-top: 6px;">
-        <a href="home.html"><button  type="button" class="btn btn-danger" >Go Back Home
+        <button  type="button" class="btn btn-success" >Cancel Ticket
       </button>
      <!--  </div>
       <div class="mx-auto" style="width: 400px; margin-top: 10px"> -->
-       <button  type="button" class="btn btn-success" style="margin-left: 240px; margin-top: 6px;">Cancel Ticket
+        <a href="home.html"><button  type="button" class="btn btn-danger" style="margin-left: 240px; margin-top: 6px;">Continue to Home
       </button>
       </div>
   </div>
