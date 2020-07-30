@@ -31,7 +31,7 @@ html {
   }	
 
   @-webkit-keyframes spin {	
-	30% { -webkit-transform: rotate(0deg); }	
+	0% { -webkit-transform: rotate(0deg); }	
 	100% { -webkit-transform: rotate(360deg); }	
   }	
 
