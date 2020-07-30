@@ -13,6 +13,9 @@ html {
      float: left !important;
      padding: 10px 18px 10px 18px !important;
  }
+ .box{
+	 background-color: #ffcc00;
+ }
  #loader {	
 	position: absolute;	
 	left: 50%;	
