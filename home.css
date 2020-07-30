@@ -11,7 +11,7 @@ html {
  .nav-item :hover{
      background-color: #ffcc00;
      float: left !important;
-     padding: 10px 18px 10px 18px !important;
+     padding: 10px 20px 10px 18px !important;
  }
  .box{
 	 background-color: #ffcc00;
