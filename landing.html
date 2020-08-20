@@ -1,116 +1,155 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<link rel="icon" 
-      type="image/png" 
-      href="images/logo.png" >
-	<title>Home Page</title>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="images/logo.png" >
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="landing.css">
-    <style>
-    	#user{
-    		color: red;
-    	}
-    </style>
-</head>
+    <title>Home Page</title>
+    
+  </head>
+  <body onload="myFunction()" style="margin:0;">
+    <div id="loader" style="margin-left:-2%;"></div>
 
+      
+      <nav class="navbar navbar-expand-xl navbar-light" style="background-color: #003d66;" id="navbar">
+        <img src ="images/logo.png" class ="logo" height="40px" width="50px" style="border-radius: 50%;">
+        <a class="navbar-brand" href="#" style="color: yellow; margin-left: 1.8%; font-family: sans-serif; font-size: 30px " >INDIAN RAILWAYS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="book.html" style="color: white; width: 100%; margin-left: 10px; margin-right: 10px;" >BOOK TICKET <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cancel.html" style="color: white; width: 100%; margin-left: 10px; margin-right: 10px;" >CANCEL TICKET</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="color: white; width: 100%; margin-left: 10px; margin-right: 10px;" >MODIFY TICKET</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="view.html" style="color: white; width: 100%; margin-left: 10px; margin-right: 10px;" >VIEW TICKET</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pnr.html" style="color: white; width: 100%; margin-left: 10px; margin-right: 10px;" >PNR STATUS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html" style="color: white; width: 100%; margin-left: 10px; margin-right: 10px;" >CONTACT US</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="book.html" style="color: white; width: 100%; margin-left: 10px; margin-right: 10px;" >LOGIN <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="book.html" style="color: white; width: 100%; margin-left: 10px; margin-right: 10px;" >NEW USER <span class="sr-only">(current)</span></a>
+              </li> 
+              
+          </ul>
+          
+        </div>
+      </nav>
+      <div class="box" style="height: 5px" style="width: 100%" ></div>
+    </div>
+    <div class="container">
+        <div class="row">
+    <div class ="loginbox ">
 
-<body>
-	<header>
-		<img src ="images/logo.png" class ="logo" height="40px" width="50px">
-		<nav>
-			<h1>INDIAN RAILWAYS</h1>
-			<ul id="nav">
-				<li><a class="homeyellow" href="login.html">BOOK TICKET</a></li>
-				<li><a class ="homeyellow" href="login.html">MODIFY TICKET</a></li>
-				<li><a class ="homeyellow" href="login.html">CANCEL TICKET</a></li>
-				<li><a class ="homeyellow" href="login.html">VIEW TICKET</a></li>
-				<li><a class ="homeyellow" href="login.html">PNR STATUS</a></li>
-				<li><a class ="homeyellow" href="contact.html">CONTACT US</a></li>
-				<li><a  id = "user" class ="homeyellow" href="login.html">LOGIN</a></li>
-				<li><a  id = "user"  class ="homeyellow" href="signup.html">NEW USER</a></li>
-			</ul>
-			
-			
-        </nav>
-        <div class ="loginbox">
-
-            <img src ="images/logo.png" class ="logo"height="40px" width="50px">
-            <h2 id="view">FIND TRAINS</h2>
+        <img src ="images/logo.png" class ="pogo"height="40px" width="50px">
+        <h1 class="hed">BOOK YOUR TICKET</h1>
+    
+        <form class="form-label-group">
+    
+            <div class="form-label-group">
+                <input type="text" class="form-control" placeholder="From*" required >
+                <label for="from">From*</label>
+              </div>
+              
+            <div class="form-label-group">
+                <input type="text" class="form-control" placeholder="To*" required >
+                <label for="to">To*</label>
+              </div>
         
-            <form class="form-label-group">
-        
-                <div class="form-label-group">
-                    <input type="text" class="form-control" placeholder="From*" required autofocus>
-                    <label for="from">From*</label>
-                  </div>
-                  
-                <div class="form-label-group">
-                    <input type="text" class="form-control" placeholder="To*" required autofocus>
-                    <label for="to">To*</label>
-                  </div>
+            <div class="form-label-group">
+                <input type="date" id="date" name="date" class="form-control">
+              </div>  
             
-                <div class="form-label-group">
-                    <input type="date" id="date" name="date" class="form-control">
-                  </div>  
+            <div class="form-label-group">  
                 
-                <div class="form-label-group">  
-                    
-                <select class="" aria-label="All Classes">
-                    <!---->
-                    <option class="ll">
-                        All Classes
-                    </option>
-                    <!----><!----><!----><!---->
-                    <option class="" value="AC">
-                        All Classes
-                    </option>
-                    <option class="" value="EA">
-                        Anubhuti Class (EA)
-                    </option>
-                    <option class="" value="1A">
-                        AC First Class (1A) 
-                    </option>
-                    <option class="" value="EC">
-                        Exec. Chair Car (EC)
-                    </option>
-                    <option class="" value="2A">
-                        AC 2 Tier (2A)
-                    </option>
-                    <option class="" value="FC">
-                        First Class (FC)
-                    </option>
-                    <option class="" value="3A">
-                        AC 3 Tier (3A)
-                    </option>
-                    <option class="" value="3E">
-                        AC 3 Economy (3E)
-                    </option>
-                    <option class="" value="CC">
-                        AC Chair car (CC)
-                    </option>
-                    <option class="" value="SL">
-                        Sleeper (SL)
-                    </option>
-                    <option class="" value="2S">
-                        Second Sitting (2S)
-                    </option>
-                    <!---->
-                </select>
-                </div>
-                <br><br>
-                <p></p>
-                <!-- <input type="submit" name="" value="Login"> -->
-                <a href="#"><button type="button" class="new1">Find Your Train</button><br></a>
-                <br><br><br>
-                </div>
-                
-            </form>
-        
+            <select class="" aria-label="All Classes">
+                <!---->
+                <option class="ll">
+                    All Classes
+                </option>
+                <!----><!----><!----><!---->
+                <option class="" value="AC">
+                    All Classes
+                </option>
+                <option class="" value="EA">
+                    Anubhuti Class (EA)
+                </option>
+                <option class="" value="1A">
+                    AC First Class (1A) 
+                </option>
+                <option class="" value="EC">
+                    Exec. Chair Car (EC)
+                </option>
+                <option class="" value="2A">
+                    AC 2 Tier (2A)
+                </option>
+                <option class="" value="FC">
+                    First Class (FC)
+                </option>
+                <option class="" value="3A">
+                    AC 3 Tier (3A)
+                </option>
+                <option class="" value="3E">
+                    AC 3 Economy (3E)
+                </option>
+                <option class="" value="CC">
+                    AC Chair car (CC)
+                </option>
+                <option class="" value="SL">
+                    Sleeper (SL)
+                </option>
+                <option class="" value="2S">
+                    Second Sitting (2S)
+                </option>
+                <!---->
+            </select>
             </div>
-		
-	</header>
-	<div class="divider"></div>
-	
+            <br><br>
+            <p></p>
+            <!-- <input type="submit" name="" value="Login"> -->
+            <a href="#"><button type="button" class="new1">Find Your Train</button><br></a>
+            <br><br><br>
+            </div>
+            
+        </form>
+        </div>
+       
+    </div>
+    <script>
+      var myVar;
+      
+      function myFunction() {
+        myVar = setTimeout(showPage, 2000);
+      }
+      
+      function showPage() {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("myDiv").style.display = "block";
+      }
+      </script>
 
-</body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
 </html>
