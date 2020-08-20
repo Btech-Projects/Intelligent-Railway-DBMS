@@ -18,6 +18,7 @@ html {
  }
  button{
      display: block;
+     width: 70%;
  }
  #loader {	
 	position: absolute;	
