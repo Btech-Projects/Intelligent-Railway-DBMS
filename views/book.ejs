@@ -1,0 +1,99 @@
+<%- include("partials/header") -%>
+
+<link rel="icon" 
+      type="image/png" 
+      href="/css/logo.png" >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Ticket</title>
+<style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 767px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style> 
+  <!-- Custom styles for this template -->
+   <link href="/css/book.css" rel="stylesheet">
+</head>
+<body>
+
+<div class ="bookbox">
+
+<img src ="/css/logo.png" class ="logo"height="40px" width="50px">
+<br><br>
+<header>BOOK YOUR TICKET</header>
+    <br>
+<form class="form-label-group">
+
+    <div class="form-label-group">
+        <input type="text" class="form-control" placeholder="From*" required autofocus size="50">
+        <label for="from">From*</label>
+      </div>
+      
+    <div class="form-label-group">
+        <input type="text" class="form-control" placeholder="To*" required autofocus>
+        <label for="to">To*</label>
+      </div>
+
+    <div class="form-label-group">
+        <input type="date" id="date" name="date" class="form-control">
+      </div>  
+    
+    <div class="form-label-group">  
+       <br> 
+        <select class="" aria-label="All Classes">
+            <!---->
+            <option class="AC">
+                All Classes
+            </option>
+            <!----><!----><!----><!---->
+            <option class="" value="EA">
+                Anubhuti Class (EA)
+            </option>
+            <option class="" value="1A">
+                AC First Class (1A) 
+            </option>
+            <option class="" value="EC">
+                Exec. Chair Car (EC)
+            </option>
+            <option class="" value="2A">
+                AC 2 Tier (2A)
+            </option>
+            <option class="" value="FC">
+                First Class (FC)
+            </option>
+            <option class="" value="3A">
+                AC 3 Tier (3A)
+            </option>
+            <option class="" value="3E">
+                AC 3 Economy (3E)
+            </option>
+            <option class="" value="CC">
+                AC Chair car (CC)
+            </option>
+            <option class="" value="SL">
+                Sleeper (SL)
+            </option>
+            <option class="" value="2S">
+                Second Sitting (2S)
+            </option>
+            <!---->
+        </select>
+    </div>
+    <br><br><br>
+    <!-- <input type="submit" name="" value="Login"> -->
+    <a href="confirm.html"><button type="button" class="new1">Book Your Train</button></a>
+    <br><br><br>
+</form>
+</div>
+<%- include("partials/footer") -%>

@@ -1,0 +1,90 @@
+<%- include("partials/header") -%>
+
+<link rel="icon" 
+type="image/png" 
+href="/css/logo.png" >
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Confirm Ticket</title>
+
+<link rel="stylesheet" href="/css/home.css">
+    <style>
+          .html1  { 
+          margin-top: 70px;
+          padding: 40px;
+          font-family: 'helvetica neue';
+          background-image: linear-gradient( to bottom right,orange,#241c82);
+          }
+
+          html{
+             background: url(/css/background.jpg) no-repeat center center fixed;          /*  for scaling background image  */
+              -webkit-background-size: cover;
+              -moz-background-size: cover;
+              -o-background-size: cover;
+              background-size: cover;
+              margin-left: 40px;
+              margin-right: 40px;
+              margin-bottom: 30px;
+              margin-top: 100px;
+          }
+
+    </style>
+</head>
+<body>
+    <div class="html1">
+
+    <div class="progress" style="height: 55px; font-size: 20px; margin-top: 1.5rem;">
+        <div class="progress-bar bg-info" role="progressbar" style="width: 100%; color: #ffcc00; background-color: #003d66 !important;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Booked Ticket (Upcoming)</div>
+      </div>
+      <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead>
+            <tr class="table-primary">
+            <th scope="col" style="background-color: #ffcc00 !important; color: #003d66;">Select</th>
+            <th scope="col" style="background-color: #ffcc00 !important; color: #003d66;">Name</th>
+            <th scope="col" style="background-color: #ffcc00 !important; color: #003d66;">PNR No</th>
+            <th scope="col" style="background-color: #ffcc00 !important; color: #003d66;">Travel Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td scope="row"><div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+              </div></th>
+            <td>Mark</td>
+            <td>1234</td>
+            <td>11.04.2020</td>
+          
+          </tr>
+          <tr>
+            <th scope="row"><div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+              </div></th>
+            <td>Jacob</td>
+            <td>2345</td>
+            <td>05.12.2019</td>
+         
+          </tr>
+          <tr>
+            <th scope="row"><div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+              </div></th>
+            <td>Larry</td>
+             <td>9894</td>
+            <td>29.8.2019</td>
+       
+          </tr>
+        </tbody>
+      </table>
+    </div>
+      <div style=" margin-left: 450px; margin-top: 6px;">
+        <button  type="button" class="btn btn-danger" >Cancel Ticket
+      </button>
+     <!--  </div>
+      <div class="mx-auto" style="width: 400px; margin-top: 10px"> -->
+        <a href="/"><button  type="button" class="btn btn-success" style="margin-left: 240px; margin-top: 6px;">Confirm Booking & Go To Home
+      </button>
+      </div>
+  </div>
+
+  <%- include("partials/footer") -%>
