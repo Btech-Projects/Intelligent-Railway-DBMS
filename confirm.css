@@ -1,0 +1,66 @@
+html { 
+	
+    background: url(images/background.jpg) no-repeat center center fixed;          /*  for scaling background image  */
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+   font-family: 'helvetica neue';
+ }
+
+ .nav-item :hover{
+     background-color: #ffcc00;
+     float: left !important;
+     padding: 10px 20px 10px 35px !important;
+ }
+ .box{
+	 background-color: #ffcc00;
+ }
+ button{
+     display: block;
+ }
+ #loader {	
+	position: absolute;	
+	left: 50%;	
+	top: 50%;	
+	z-index: 1;	
+	width: 150px;	
+	height: 150px;	
+	margin: -75px 0 0 -75px;	
+	border: 16px solid #003d66;	
+	border-radius: 50%;	
+	border-top: 16px solid #ffcc00;	
+	width: 90px;	
+	height: 90px;	
+	-webkit-animation: spin 0.5s linear infinite;	
+	animation: spin 0.4s linear infinite;	
+  }	
+
+  @-webkit-keyframes spin {	
+	0% { -webkit-transform: rotate(0deg); }	
+	100% { -webkit-transform: rotate(360deg); }	
+  }	
+
+  @keyframes spin {	
+	0% { transform: rotate(0deg); }	
+	100% { transform: rotate(360deg); }	
+  }	
+
+  /* Add animation to "page content" */	
+  .animate-bottom {	
+	position: relative;	
+	-webkit-animation-name: animatebottom;	
+	-webkit-animation-duration: 0.5s;	
+	animation-name: animatebottom;	
+	animation-duration: 0.5s	
+  }	
+
+  @-webkit-keyframes animatebottom {	
+	from { bottom:-100px; opacity:0 } 	
+	to { bottom:0px; opacity:1 }	
+  }	
+
+  @keyframes animatebottom { 	
+	from{ bottom:-100px; opacity:0 } 	
+	to{ bottom:0; opacity:1 }	
+  }	
