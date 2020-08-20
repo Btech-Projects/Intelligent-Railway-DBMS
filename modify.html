@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modify Ticket</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style media="screen">
+        body{
+          padding-top:80px;
+        }
+  
+        .jumbotron{
+          height:70%;
+            margin:3;
+          background-image: linear-gradient( to bottom right,orange,#241c82);
+            padding-left:20px;
+            border-radius: 10px;
+        }
+        .box{
+            background: linear-gradient(to bottom, #3f8abd 0%, #2c3e50 100%);
+            border-radius: 10px;
+            height: 600px;
+        }
+        .shape{
+            /* background-color: lightgrey; */
+            /* width: 300px; */
+            /* border: 2px solid rgb(185, 183, 47); */
+            padding: 5px;
+            margin: 20px;
+            color: rgb(236, 240, 34);
+            
+        }
+      </style>
+</head>
+<body background="images\background.jpg">
+    <div class="container">
+        <div class="jumbotron">
+          <h1 style="align-content: center; text-align: center; color: #000;" class="text-white">Modify Ticket</h1>
+          <section id="events">
+            <br>
+          <div class="container small">
+          <div class="row">
+          <div class="card offset-sm-3 col-6 col-md-4 ml-auto mr-auto mt-auto box" style="width: 50%; height: 50%; margin-bottom:10px !important; padding: 0px 0px 0px 0px;" >
+            <h2 style="align-content: center; text-align: center; align-self: center; margin-bottom: -0.8rem; " class="text-warning">Current Ticket</h2>
+            <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+            <div style="padding-left: 1rem; padding-right: 0.8rem; font-size: 18px; color: white;">
+                <div class="table-responsive">
+                <table class="table table-bordered">
+                    <tbody>
+                      <tr>
+                        <td style="color: white;">Train No</td>
+                        <td style="color: white;">123456</td>
+                      </tr>
+                      <tr>
+                        <td style="color: white;">Seat No</td>
+                        <td style="color: white;">12</td>
+                      </tr>
+                      <tr>
+                        <td style="color: white;">Class </td>
+                        <td style="color: white;">A1</td>
+                      </tr>
+                      <tr>
+                        <td style="color: white;">Coach</td>
+                        <td style="color: white;"> A1</td>
+                      </tr>
+                      <tr>
+                        <td style="color: white;">PNR No</td>
+                        <td style="color: white;">123456789</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+        </div>
+          </div>
+          <div class="card offset-sm-3 col-6 col-md-4 ml-auto mr-auto mt-auto box"  style="width: 70%; height:50%; margin-bottom:10px !important; padding: 0px 0px 0px 0px;">
+            <h2 style="align-content: center; text-align: center;margin-bottom: -0.7rem;" class="text-warning">Modify To</h2>
+            <hr style="height:2px;border-width:0;color:gray;background-color:gray;">
+            <div style="padding-left: 1rem; font-size: 18px; padding-right: 0.8rem;">
+                <div class="table-responsive" style="margin-bottom: 0.65rem;">
+                <table class="table table-bordered">
+                    <tbody>
+                      <tr>
+                        <td style="color: white;">Coach No</td>
+                        <td style="color: white;"><input type="text" id="fname" name="fname"></td>
+                      </tr>
+                      <tr>
+                        <td style="color: white;">Seat No</td>
+                        <td style="color: white;"><input type="text" id="lname" name="lname"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <br><br><br><br>
+  
+  
+          
+          </div></div>
+  </section>
+  <div class="text-center">
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal1">
+    Request Modify
+  </button>
+</div>
+<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color:  rgb(122, 122, 214)">
+          <h5 class="modal-title" id="exampleModalLabel" style="color: yellow;">Confirm Modify</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" style="color: yellow; size: 1rem; font-size: 2rem;">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Once modified might be possible that it can not be revert back.<br><br><br>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Confirm</button>
+        </div>
+      </div>
+    </div>
+  </div>
+      </div>
+      </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
