@@ -7,54 +7,52 @@ html {
    background-size: cover;
    font-family: 'helvetica neue';
  }
- .logo{
-     border-radius: 50%;
-	float: left;
+ 
+ .nav-item :hover{
+  background-color: #ffcc00;
+  float: left !important;
+  padding: 10px 20px 10px 35px !important;
 }
+.box{
+  background-color: #ffcc00;
+}
+.container{
+  height: 30%;
+}
+.container .loginbox{
+  margin-top: 30px;
+  float: left;
+  animation-name: animation;
+  animation-duration: 3s;
+  border-radius: 2%;
+  width: 30%;
+  height: 550px;
+  background: #003d66;
+  color: #fff;
+  top: 350px;
+  left: 50%;
+  bottom: 20%;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  box-sizing: border-box;
+  padding: 85px 30px;
+  opacity: 90%;
+}
+form{
+  width: 100%;
+  height: 100%;
+}
+.pogo{
+	border-radius: 50%;
+	margin-left: 41%;
+	margin-top: -50px;
+}
+
  body{
      margin:0;
  }
  
- header{
-     background: #003d66;
-     color: white;
-     padding: 8px 0px 10px 40px;
-     height:45px;
-     font-weight: bold;
-     opacity: 90%
- }
- header h1{
-     color: #ffcc00;
-     display: inline;
-     font-family: sans-serif;
-     font-weight: 400;
-     font-size: 40px;
-     
-     margin-right: 30px;
- }
- nav ul{
-     display:inline;
-     padding: 0px;
-     
- }
- #view{
-   text-align: center;
-   color: #ffcc00;
- }
- nav ul li{
-     font-family: sans-serif;
-     display: inline-block;
-     list-style-type: none;
-     color: white;
-     
-     margin-left: 30px;
-     font-weight: bold;
- 
- }
- nav ul li a {
-     color:  white;
-     text-decoration: none;
- }
+
  .divider{
      background-color: #ffcc00;
      height: 5px;
@@ -64,15 +62,6 @@ html {
      background-color: #ffcc00;
      padding: 32px 12px 19px 12px;
  
- }
- html { 
-	
-    background: url(images/background.jpg) no-repeat center center fixed;          /*  for scaling background image  */
-   -webkit-background-size: cover;
-   -moz-background-size: cover;
-   -o-background-size: cover;
-   background-size: cover;
-   font-family: 'helvetica neue';
  }
  @keyframes animation {
      0% {
@@ -94,34 +83,9 @@ html {
        opacity: 90%;
      }
    }
- .form-forgot-signup{
-     margin-top: 20px;
- }
- .loginbox{
-   margin-top: 30px;
-     float: left;
-     animation-name: animation;
-     animation-duration: 5s;
-     border-radius: 2%;
-     width: 350px;
-     height: 550px;
-     background: #003d66;
-     color: #fff;
-     top: 50%;
-     left: 50%;
-     position: absolute;
-     transform: translate(-50%,-50%);
-     box-sizing: border-box;
-     padding: 85px 30px;
-     opacity: 90%;
- }
- .logo{
-     border-radius: 50%;
-     margin-left: 41%;
-     margin-top: -50px;
- }
- 
- h1{
+
+
+ .hed{
      color: #ffcc00;
      text-align: center;
      margin: 0;
@@ -291,4 +255,6 @@ html {
      color: #777;
    }
  }
+ 
+
  
