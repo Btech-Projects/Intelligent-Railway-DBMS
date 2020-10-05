@@ -33,15 +33,15 @@
 <br><br>
 <header>BOOK YOUR TICKET</header>
     <br>
-<form class="form-label-group">
+<form class="form-label-group"  method="POST" action="/book">
 
     <div class="form-label-group">
-        <input type="text" class="form-control" placeholder="From*" required autofocus size="50">
+        <input type="text" class="form-control" placeholder="From*" name="from" required autofocus size="50">
         <label for="from">From*</label>
       </div>
       
     <div class="form-label-group">
-        <input type="text" class="form-control" placeholder="To*" required autofocus>
+        <input type="text" class="form-control" placeholder="To*" name="to" required autofocus>
         <label for="to">To*</label>
       </div>
 
@@ -51,39 +51,25 @@
     
     <div class="form-label-group">  
        <br> 
-        <select class="" aria-label="All Classes">
+        <select class="" aria-label="All Classes"  id="scripts" name="scripts">
+            
             <!---->
             <option class="AC">
                 All Classes
             </option>
             <!----><!----><!----><!---->
-            <option class="" value="EA">
-                Anubhuti Class (EA)
-            </option>
             <option class="" value="1A">
                 AC First Class (1A) 
             </option>
-            <option class="" value="EC">
-                Exec. Chair Car (EC)
-            </option>
+            
             <option class="" value="2A">
                 AC 2 Tier (2A)
             </option>
-            <option class="" value="FC">
-                First Class (FC)
-            </option>
-            <option class="" value="3A">
-                AC 3 Tier (3A)
-            </option>
-            <option class="" value="3E">
-                AC 3 Economy (3E)
-            </option>
-            <option class="" value="CC">
-                AC Chair car (CC)
-            </option>
+            
             <option class="" value="SL">
                 Sleeper (SL)
             </option>
+
             <option class="" value="2S">
                 Second Sitting (2S)
             </option>
@@ -92,7 +78,7 @@
     </div>
     <br><br><br>
     <!-- <input type="submit" name="" value="Login"> -->
-    <a href="confirm.html"><button type="button" class="new1">Book Your Train</button></a>
+    <a href="/"><button type="submit" class="new1">Book Your Train</button></a>
     <br><br><br>
 </form>
 </div>

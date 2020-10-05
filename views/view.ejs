@@ -31,29 +31,6 @@
     </style>
 </head>
 <body>
-    <div class="html1">
-
-    <div class="progress" style="height: 55px; margin-top: 1rem; font-size: 22px;">
-        <div class="progress-bar bg-info" role="progressbar" style=" width:100%; color: #ffcc00; background-color: #003d66 !important;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Search Tickets</div>
-    </div>
-        <div class="table-responsive example">
-        <form class="form-inline" >
-	        <div class="form-group" style="margin-top: 2rem; margin-left: 0.5rem;">
-	          <label for="inputPassword6">PNR number </label>
-	          <input type="text" id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
-	          <label for="inputPassword8">From Station </label>
-	           <input type="text" id="inputPassword8" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">     
-	           <label  for="inputPassword9">To Station  &nbsp; &nbsp; &nbsp; </label>
-	           <input type="text" id="inputPassword9" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
-	           <label for="inputPassword6">Journey Date</label>
-	           <input  type="password" id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
-	        </div>
-	      </form>
-        </div>
-      <div style="align-content: center; align-items: center;margin-left: 43rem;">
-      <button type="button" class="btn btn-primary" style="margin-bottom: 10px; margin-top: 18px; margin-left: -34px;">Search
-        </button>
-    </div> 
 
     <div class="progress" style="height: 55px; font-size: 20px; margin-top: 1.5rem;">
         <div class="progress-bar bg-info" role="progressbar" style="width: 100%; color: #ffcc00; background-color: #003d66 !important;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Recent Booked Tickets</div>
@@ -62,29 +39,18 @@
       <table class="table table-bordered">
         <thead>
             <tr class="table-primary">
-            <th scope="col" style="background-color: #ffcc00 !important; color: #003d66;">Name</th>
+            <th scope="col" style="background-color: #ffcc00 !important; color: #003d66;">Train No</th>
             <th scope="col" style="background-color: #ffcc00 !important; color: #003d66;">PNR No</th>
-            <th scope="col" style="background-color: #ffcc00 !important; color: #003d66;">Travel Date</th>
+            <th scope="col" style="background-color: #ffcc00 !important; color: #003d66;">No of Seats</th>
+            <th scope="col" style="background-color: #ffcc00 !important; color: #003d66;">Status</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Mark</td>
-            <td>1234</td>
-            <td>11.04.2020</td>
-          
-          </tr>
-          <tr>
-            <td>Jacob</td>
-            <td>2345</td>
-            <td>05.12.2019</td>
-         
-          </tr>
-          <tr>
-            <td>Larry</td>
-             <td>9894</td>
-            <td>29.8.2019</td>
-       
+            <td><%= pnrres.trainno %></td>
+            <td><%= pnrres.pnr %></td>
+            <td><%= pnrres.nos %></td>
+            <td><%= pnrres.status %></td>
           </tr>
         </tbody>
       </table>
