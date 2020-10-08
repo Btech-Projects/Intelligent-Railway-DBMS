@@ -64,7 +64,6 @@ app.get('/', function(req,res){
       stat = "WAITING";
     }
     let query=`INSERT INTO ticket(trainno, sp, dp, tfare,class,nos,status) values('${result1[i].trainno}','${result1[i].sp}','${result1[i].dp}','${result1[i].fare}','${result1[i].class}','${seats}','${stat}');`;
-    console.log(query);
     con.query(query, (err) => {
       if(err){
         res.render('show',{result: result1});
@@ -86,9 +85,26 @@ app.get('/', function(req,res){
   })
   
   
-  // app.get('/view', function(req,res){
-  //   res.render('view');
-  // })
+  app.get('/enquiry', function(req,res){
+    res.render('enquiry');
+  })
+
+  app.post('/enquiry', function(req,res){
+    var trnno=req.body.trnno;
+  let query1=`select * from schedule where trainno=${trnno};`;
+  con.query(query1, (err, foundResult1) => {
+    if(err) console.log(err);
+    else{
+        if (foundResult1){
+            res.render('details',{pnrres: foundResult1});
+        }
+        else{
+            res.render('enquiry');
+        }
+    }
+ 
+});
+})
 
   app.get('/pnr', function(req,res){
     res.render('pnr');
@@ -101,7 +117,6 @@ app.post('/pnr', function(req,res){
     if(err) console.log("failed1");
     else{
         if (foundResult){
-          console.log(foundResult[0]);
             res.render('view',{pnrres: foundResult[0]});
         }
         else{
