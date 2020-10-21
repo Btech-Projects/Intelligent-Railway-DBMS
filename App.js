@@ -18,11 +18,75 @@ app.use(express.static("public"));
 var con = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "12345",
-  database : 'login',
+  password: "",
+  database : 'railway',
   multipleStatements: true
 });
 
+con.connect(function(err){
+  if(err) {
+      // mysqlErrorHandling(connection, err);
+      console.log("\n\t *** Cannot establish a connection with the database. ***");
+
+      con = reconnect(con);
+  }else {
+      console.log("\n\t *** New connection established with the database. ***")
+  }
+});
+function reconnect(con){
+  console.log("\n New connection tentative...");
+
+  //- Destroy the current connection variable
+  if(con) con.destroy();
+
+  //- Create a new one
+  var con = mysql_npm.createConnection(db_config);
+
+  //- Try to reconnect
+  con.connect(function(err){
+      if(err) {
+          //- Try to connect every 2 seconds.
+          setTimeout(reconnect, 3000);
+      }else {
+          console.log("\n\t *** New connection established with the database. ***")
+          return con;
+      }
+  });
+}
+
+//- Error listener
+con.on('error', function(err) {
+
+  //- The server close the connection.
+  if(err.code === "PROTOCOL_CONNECTION_LOST"){    
+      console.log("/!\\ Cannot establish a connection with the database. /!\\ ("+err.code+")");
+      con = reconnect(con);
+  }
+
+  //- Connection in closing
+  else if(err.code === "PROTOCOL_ENQUEUE_AFTER_QUIT"){
+      console.log("/!\\ Cannot establish a connection with the database. /!\\ ("+err.code+")");
+      con = reconnect(con);
+  }
+
+  //- Fatal error : connection variable must be recreated
+  else if(err.code === "PROTOCOL_ENQUEUE_AFTER_FATAL_ERROR"){
+      console.log("/!\\ Cannot establish a connection with the database. /!\\ ("+err.code+")");
+      con = reconnect(con);
+  }
+
+  //- Error because a connection is already being established
+  else if(err.code === "PROTOCOL_ENQUEUE_HANDSHAKE_TWICE"){
+      console.log("/!\\ Cannot establish a connection with the database. /!\\ ("+err.code+")");
+  }
+
+  //- Anything else
+  else{
+      console.log("/!\\ Cannot establish a connection with the database. /!\\ ("+err.code+")");
+      con = reconnect(con);
+  }
+
+});
 
 var result1 = '';
 var luser='';
@@ -147,7 +211,7 @@ app.post('/pnr', function(req,res){
     const username=req.body.email;
     const password=md5(req.body.pwd);
     con.query(`select email , password from login where email='${username}' and password=aes_encrypt('${password}','${process.env.KEY}');`, (err, foundUser) => {
-      if(err) console.log("failed1");
+      if(err) console.log(err);
       else{
           if (foundUser[0]){
             luser=foundUser[0].email;
