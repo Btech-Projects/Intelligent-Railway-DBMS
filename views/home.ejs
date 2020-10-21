@@ -7,6 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="/css/home.css">
 <title>Home Page</title>
+<style>
+.pop{
+  height: 90px;
+  width: 120px;
+  background: rgb(216, 49, 49);
+  bottom: -170px;
+  right: 0;
+  font-size: 25px;
+  /* padding-top: 20px; */
+  border-radius: 10px;
+  position: absolute;
+  vertical-align:top;
+  bottom: 0;
+}
+body {
+  overflow: hidden;
+}
+
+</style>
 
 </head>
 <body onload="myFunction()" style="margin:0;">
@@ -32,7 +51,7 @@
           <a class="nav-link" href="/modify" style="color: white; width: 100%; margin-left: 10px; margin-right: 10px;" >MODIFY TICKET</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="enquiry" style="color: white; width: 100%; margin-left: 10px; margin-right: 10px;" >Enquiry</a>
+          <a class="nav-link" href="enquiry" style="color: white; width: 100%; margin-left: 10px; margin-right: 10px;" >ENQUIRY</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="pnr" style="color: white; width: 100%; margin-left: 10px; margin-right: 10px;" >PNR STATUS</a>
@@ -50,6 +69,11 @@
   </nav>
   <div class="box" style="height: 5px" style="width: 100%" ></div>
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<button class="pop" data-toggle="modal" data-target="#exampleModal">Message</button>
+
+ 
 <script>
   var myVar;
   
@@ -61,6 +85,7 @@
     document.getElementById("loader").style.display = "none";
     document.getElementById("myDiv").style.display = "block";
   }
+
   </script>
 
 <%- include("partials/footer") -%>

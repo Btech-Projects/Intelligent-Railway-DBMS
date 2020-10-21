@@ -1,128 +1,57 @@
 <%- include("partials/header") -%>
 
+
+<title>PNR Status</title>
 <link rel="icon" 
-      type="image/png" 
-      href="/css/logo.png" >
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modify Ticket</title>
-<style media="screen">
-    body{
-      padding-top:80px;
+  type="image/png" 
+  href="/css/logo.png" >
+  
+<link rel="stylesheet" type="text/css" href="/css/pnr.css">
+<link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/floating-labels/">
+
+<style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
     }
 
-    .jumbotron{
-      height:70%;
-        margin:3;
-      background-image: linear-gradient( to bottom right,orange,#241c82);
-        padding-left:20px;
-        border-radius: 10px;
+    @media (min-width: 767px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
     }
-    .box{
-        background: linear-gradient(to bottom, #3f8abd 0%, #2c3e50 100%);
-        border-radius: 10px;
-        height: 500px;
-    }
-    .shape{
-        /* background-color: lightgrey; */
-        /* width: 300px; */
-        /* border: 2px solid rgb(185, 183, 47); */
-        padding: 5px;
-        margin: 20px;
-        color: rgb(236, 240, 34);
-        
-    }
-  </style>
+  </style> 
+  <!-- Custom styles for this template -->
+   <link href="pnr.css" rel="stylesheet">
 </head>
-<body background="/css/background.jpg">
-<div class="container">
-    <div class="jumbotron">
-      <h1 style="align-content: center; text-align: center; color: #000;" class="text-white">Modify Ticket</h1>
-      <section id="events">
-        <br>
-      <div class="container small">
-      <div class="row">
-      <div class="card offset-sm-3 col-6 col-md-4 ml-auto mr-auto mt-auto box" style="width: 50%;margin-bottom:10px !important; padding: 0px 0px 0px 0px;" >
-        <h2 style="align-content: center; text-align: center; align-self: center; margin-bottom: -0.8rem; " class="text-warning">Current Ticket</h2>
-        <hr style="height:2px;border-width:0;color:gray;background-color:gray">
-        <div style="padding-left: 1rem; padding-right: 0.8rem; font-size: 18px; color: white;">
-            <div class="table-responsive">
-            <table class="table table-bordered">
-                <tbody>
-                  <tr>
-                    <td style="color: white;">Train No</td>
-                    <td style="color: white;">123456</td>
-                  </tr>
-                  <tr>
-                    <td style="color: white;">Seat No</td>
-                    <td style="color: white;">12</td>
-                  </tr>
-                  <tr>
-                    <td style="color: white;">Class </td>
-                    <td style="color: white;">A1</td>
-                  </tr>
-                  <tr>
-                    <td style="color: white;">Coach</td>
-                    <td style="color: white;"> A1</td>
-                  </tr>
-                  <tr>
-                    <td style="color: white;">PNR No</td>
-                    <td style="color: white;">123456789</td>
-                  </tr>
-                </tbody>
-              </table>
+<body>
+
+<div class ="pnrbox">
+
+    <img src ="/css/logo.png" class ="logo"height="40px" width="50px">
+    <br>
+    <h2>MODIFY TICKET</h2>
+        <p class="beltext" style="text-align: center; color: rgb(204, 181, 181);">Enter the pnr for modification of ticket. </p>
+        <br><br>
+        <form class="form-label-group"  method="POST" action="/modify">
+
+            <div class="form-label-group">
+                <input type="text" class="form-control" name="pnr" placeholder="pnr" required autofocus>
+                <label for="pnr">PNR Number</label>
             </div>
-    </div>
-      </div>
-      <div class="card offset-sm-3 col-6 col-md-4 ml-auto mr-auto mt-auto box"  style="width: 70%;margin-bottom:10px !important; padding: 0px 0px 0px 0px;">
-        <h2 style="align-content: center; text-align: center;margin-bottom: -0.7rem;" class="text-warning">Modify To</h2>
-        <hr style="height:2px;border-width:0;color:gray;background-color:gray;">
-        <div style="padding-left: 1rem; font-size: 18px; padding-right: 0.8rem;">
-            <div class="table-responsive" style="margin-bottom: 0.65rem;">
-            <table class="table table-bordered">
-                <tbody>
-                  <tr>
-                    <td style="color: white;">Coach No</td>
-                    <td style="color: white;"><input type="text" id="fname" name="fname"></td>
-                  </tr>
-                  <tr>
-                    <td style="color: white;">Seat No</td>
-                    <td style="color: white;"><input type="text" id="lname" name="lname"></td>
-                  </tr>
-                </tbody>
-              </table>
+            <br>  
+            <!-- <input type="submit" name="" value="Login"> -->
+            <a href=""><button type="submit" class="new1">Get Status</button><br></a>
+            <!-- <a href=""><button type="button" class="new1">Clear</button><br></a> -->
+            <br><br><br>
             </div>
-            <br><br><br><br>
+            
+        </form>
 
+</div>
 
-      
-      </div></div>
-</section>
-<div class="text-center">
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal1">
-Request Modify
-</button>
-</div>
-<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-<div class="modal-dialog" role="document">
-  <div class="modal-content">
-    <div class="modal-header" style="background-color:  rgb(122, 122, 214)">
-      <h5 class="modal-title" id="exampleModalLabel" style="color: yellow;">Confirm Modify</h5>
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true" style="color: yellow; size: 1rem; font-size: 2rem;">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      Once modified might be possible that it can not be revert back.<br><br><br>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      <button type="button" class="btn btn-primary">Confirm</button>
-    </div>
-  </div>
-</div>
-</div>
-  </div>
-  </div>
-
-  <%- include("partials/footer") -%>
+<%- include("partials/footer") -%>
