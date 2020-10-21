@@ -1,0 +1,194 @@
+html { 
+	
+    background: url(background.jpg) no-repeat center center fixed;          /*  for scaling background image  */
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+   font-family: 'helvetica neue';
+ }
+ .form-forgot-signup{
+	margin-top: 20px;
+}
+.loginbox{
+	animation-name: animation;
+	animation-duration: 3s;
+	border-radius: 2%;
+	width: 400px;
+	height: 700px;
+	background: #003d66;
+	color: #fff;
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	box-sizing: border-box;
+	padding: 70px 30px;
+	opacity: 90%;
+}
+@keyframes animation {
+    0% {
+      opacity: 10%;
+    }
+  
+    25% {
+        opacity: 50%;
+    }
+  
+    50% {
+  opacity: 70%;
+	} 
+	75%{
+		opacity:80%;
+	}   
+  
+    100% {
+      opacity: 90%;
+    }
+  }
+.logo{
+	border-radius: 50%;
+	margin-left: 41%;
+	margin-top: -50px;
+}
+
+h1{
+	color: #ffcc00;
+	text-align: center;
+	margin: 0;
+	padding: 0 0 20px;
+	margin-top: 10px;
+	font-size: 25px;
+}
+.loginbox p{
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+}
+.loginbox input{
+	width: 100%;
+	margin-bottom:20px;
+}
+.loginbox input[type="text"],input[type="password"]
+{
+	border:none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline: none;
+	height:40;
+	color: #ffcc00;
+	font-size: 16px;
+}
+.new1, .loginbox input[type="submit"]
+{
+	margin-top: 8px;
+	border:none;
+	outline: none;
+	height: 40px;
+	width: 100%;
+	font-size: 16px;
+  	margin: 4px;
+	text-align: center;
+	background: #ffcc00;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 20px;
+}
+.new1:hover, .loginbox input[type="submit"]:hover
+{
+	cursor: pointer;
+	background: #cca300;
+	color:000;
+}
+.loginbox a{
+	text-decoration: none;
+	font-size: 12px;
+	line-height: 20px;
+	color: darkgrey;
+}
+.loginbox a:hover{
+	color:#ffcc00;
+} 
+
+.form-label-group {
+  position: relative;
+  margin-bottom: -0.5rem;
+}
+
+.form-label-group > input,
+.form-label-group > label {
+  height: 3.125rem;
+  position: relative;
+  top: -1rem;
+  /* padding: .75rem; */
+} 
+
+ .form-label-group > label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  margin-bottom: 0; /* Override default `<label>` margin */
+  line-height: 1.5;
+  color: #fff;
+  pointer-events: none;
+   cursor: text;  /*Match the input under the label */
+   border: 1px solid transparent;
+  border-radius: .25rem;
+  transition: all .1s ease-in-out;
+}
+
+.form-label-group input::-webkit-input-placeholder {
+  color:  #cca300;
+} 
+
+ .form-label-group input:-ms-input-placeholder {
+  color:  #cca300;
+}
+
+.form-label-group input::-ms-input-placeholder {
+  color:  #cca300;
+}
+
+.form-label-group input::-moz-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::placeholder {
+  color: transparent;
+} 
+
+.form-label-group input:not(:placeholder-shown) {
+  padding-top: 1.25rem;
+  padding-bottom: .25rem;
+} 
+
+.form-label-group input:not(:placeholder-shown) ~ label {
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  font-size: 12px;
+  color: #777;
+}
+
+/* Fallback for Edge
+-------------------------------------------------- */
+@supports (-ms-ime-align: auto) {
+  .form-label-group > label {
+    display: none;
+  }
+  .form-label-group input::-ms-input-placeholder {
+    color: #777;
+  }
+}
+
+/* Fallback for IE
+-------------------------------------------------- */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .form-label-group > label {
+    display: none;
+  }
+  .form-label-group input:-ms-input-placeholder {
+    color: #777;
+  }
+}

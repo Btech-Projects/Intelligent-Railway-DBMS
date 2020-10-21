@@ -1,0 +1,75 @@
+<%- include("partials/header") -%>
+
+<link rel="icon" 
+      type="image/png" 
+      href="/css/logo.png" >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Ticket</title>
+<link rel="stylesheet" href="/css/home.css">
+    <style>
+          .html1  { 
+          margin-top: 70px;
+          padding: 40px;
+          font-family: 'helvetica neue';
+          background-image: linear-gradient( to bottom right,orange,#241c82);
+          }
+
+          html{
+             background: url(/css/background.jpg) no-repeat center center fixed;          /*  for scaling background image  */
+              -webkit-background-size: cover;
+              -moz-background-size: cover;
+              -o-background-size: cover;
+              background-size: cover;
+              margin-left: 40px;
+              margin-right: 40px;
+              margin-bottom: 30px;
+          }
+			 .example::-webkit-scrollbar {
+			            display: none;
+			        }
+    </style>
+</head>
+<body>
+    <div class="html1">
+        
+
+
+    <div class="progress" style="height: 55px; font-size: 20px; margin-top: 1.5rem;">
+        <div class="progress-bar bg-info" role="progressbar" style="width: 100%; color: #ffcc00; background-color: #003d66 !important;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Book Ticket</div>
+      </div>
+      <form method="POST" action="/show" class="form">
+      <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead>
+            <tr class="table-primary">
+            <th scope="col" style="background-color: #ffcc00 !important; color: #003d66;">Train Number</th>
+            <th scope="col" style="background-color: #ffcc00 !important; color: #003d66;">Seats Available</th>
+            <th scope="col" style="background-color: #ffcc00 !important; color: #003d66;">Type</th>
+            <th scope="col" style="background-color: #ffcc00 !important; color: #003d66;">Fare</th>
+            <th scope="col" style="background-color: #ffcc00 !important; color: #003d66;">No Of Seats Required</th>
+          </tr>
+        </thead>
+        <tbody>
+            <form method="POST" action="/show" class="form"></form>
+            <% for(var i=0;i < result.length; i++){ %>
+          <tr>
+            <td><%= result[i].trainno %></td>
+            <td><%= result[i].seatsleft %></td>
+            <td><%= result[i].class %></td>
+            <td><%= result[i].fare %></td>
+            <td><input type="number" id="sit" class="form-control" name="sit" placeholder="Seat"></td>
+            <td><button type="submit" name="list" class="btn btn-danger" value=<%= i %> >Book</button></td>
+          </tr>
+        </form>
+          <% } %>
+        </tbody>
+      </table>
+    </div>
+        <!-- <a href="/"><button  type="submit" class="btn btn-danger" style="margin-left: 630px; margin-top: 6px;">Book Ticket
+      </button> -->
+      </div>
+    </form>
+  </div>
+
+  <%- include("partials/footer") -%>

@@ -1,0 +1,53 @@
+<%- include("partials/header") -%>
+
+<link rel="icon" 
+type="image/png" 
+href="/css/logo.png" >
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign up</title>
+<link rel="stylesheet" href="/css/forgetpass.css">
+</head>
+
+<body>
+<div class ="loginbox">
+
+  <img src ="/css/logo.png" class ="logo"height="40px" width="50px">
+  <h1>SIGN UP</h1>
+
+  <form class="form-label-group" method="POST" action="/signup">
+
+     
+      <div class="form-label-group">
+          <input type="text" id="inputEmail" class="form-control" name="mail" placeholder="Email address" required autofocus>
+          <label for="inputEmail">Email address</label>
+        </div>
+
+     
+
+      <div class="form-label-group">
+         
+          <input type="password" id=" Password" class="form-control" name="pwd1" placeholder="Password" required>
+          <label for="inputPassword"> Password</label>
+        </div>
+      <div class="form-label-group">
+          
+          <input type="password" id="confirmPassword" class="form-control" name="pwd2" placeholder="Password" required>
+          <label for="inputPassword">Confirm Password</label>
+        </div>
+      <div class="form-label-group">
+          
+          <input type="password" id="Verification code" class="form-control" name="code" placeholder="Password" required>
+          <label for="inputPassword">Verification Code Sent On Email</label>
+        </div>
+        <a href="forgetpass">Resend Code<br></a>
+
+      <br>
+      
+      <a href="/"><button type="submit" class="new1">Sign Up</button><br></a>
+      
+      
+      
+  </form>
+
+  <%- include("partials/footer") -%>
