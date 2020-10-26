@@ -34,7 +34,7 @@ D)
          Type: node app.js
          
 
-The server has started and the program should be running now 
+The server has started and the program should be up and running now 
 
                                 Enjoy !!
                                 
