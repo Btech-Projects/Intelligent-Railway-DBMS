@@ -18,8 +18,8 @@ app.use(express.static("public"));
 var con = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "",
-  database : "railway",
+  password: "12345",
+  database : 'login',
   multipleStatements: true
 });
 
@@ -62,8 +62,8 @@ app.get('/', function(req,res){
     con.query(query, function(err,result){
       if(err) throw err;
       var pnr2=result[i].pnr;
-      let query2=`update pnr_details set seat_no='${result[i].applied_seat_no}' where trainno=${result[i].trainno} and class='${result[i].class}' and seat_no=${result[i].curr_seat_no};`;
-      query2+=`update pnr_details set seat_no='${result[i].curr_seat_no}' where trainno=${result[i].trainno} and class='${result[i].class}' and pnr<>${result[i].pnr};`;
+      let query2=`update pnr_details set seat_no='${result[i].applied_seat_no}' where trainno=${result[i].trainno} and class='${result[i].class}' and seat_no=${result[i].curr_seat_no} and pnr=${result[i].pnr};`;
+      query2+=`update pnr_details set seat_no='${result[i].curr_seat_no}' where trainno=${result[i].trainno} and class='${result[i].class}' and seat_no=${result[i].applied_seat_no} and pnr<>${result[i].pnr};`;
       con.query(query2,function(err,result1){
         if(err) throw err;
         let query3=`update modify_details set status='Approved' where email='${luser}' and trainno=${result[i].trainno} and class='${result[i].class}' and pnr=${result[i].pnr};`;
