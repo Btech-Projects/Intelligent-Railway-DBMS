@@ -42,6 +42,50 @@ app.get('/', function(req,res){
     }
   })
 
+  app.post('/logout', function(req,res){
+    luser='';
+    res.render('login');
+  })
+
+  app.get('/update', function(req,res){
+    const query=`select * from modify_details where email='${luser}' and status='Pending';`;
+    con.query(query, function(err,result){
+      if(err) throw err;
+      res.render('update',{result : result});
+    })
+    
+  })
+
+  app.post('/update', function(req,res){
+    let i = req.body.list;
+    const query=`select * from modify_details where email='${luser}' and status='Pending';`;
+    con.query(query, function(err,result){
+      if(err) throw err;
+      var pnr2=result[i].pnr;
+      let query2=`update pnr_details set seat_no='${result[i].applied_seat_no}' where trainno=${result[i].trainno} and class='${result[i].class}' and seat_no=${result[i].curr_seat_no};`;
+      query2+=`update pnr_details set seat_no='${result[i].curr_seat_no}' where trainno=${result[i].trainno} and class='${result[i].class}' and pnr<>${result[i].pnr};`;
+      con.query(query2,function(err,result1){
+        if(err) throw err;
+        let query3=`update modify_details set status='Approved' where email='${luser}' and trainno=${result[i].trainno} and class='${result[i].class}' and pnr=${result[i].pnr};`;
+        con.query(query3, function(err){
+          if(err) throw err;
+          res.render('home',{ruser: luser});
+        })
+      })
+      res.render('update',{result : result});
+    })
+  })
+
+  app.post('/reject', function(req,res){
+    let query3=`update modify_details set status='Rejected' where email='${luser}'`;
+        con.query(query3, function(err){
+          if(err) throw err;
+          res.render('home',{ruser: luser});
+        })
+  })
+
+ 
+
   app.get('/book', function(req,res){
     res.render('book');
   })

@@ -62,6 +62,10 @@ body {
         <br> 
         <h5 style="color: aliceblue; margin-top: 0.45em; margin-left: 0.45em;">
         <%= ruser %>
+        <form method="POST" action="/logout" >
+        <button class="btn btn-danger" type="submit">Logout
+        </button>
+      </form>
       </h5>
       </ul>
       
@@ -71,7 +75,9 @@ body {
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<button class="pop" data-toggle="modal" data-target="#exampleModal">Message</button>
+<a class="nav-link" href="update">
+<button class="pop" type="submit" data-toggle="modal" data-target="#exampleModal">Message</button>
+</a>
 
  
 <script>
