@@ -1,0 +1,114 @@
+<%- include("partials/header") -%>
+
+<link rel="icon" 
+      type="image/png" 
+      href="/css/logo.png" >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Ticket</title>
+<link rel="stylesheet" href="/css/home.css">
+    <style>
+          .html1  { 
+          margin-top: 70px;
+          padding: 40px;
+          font-family: 'helvetica neue';
+          background-image: linear-gradient( to bottom right,orange,#241c82);
+          }
+
+          .button {
+                background-color: #4CAF50; /* Green */
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin-left: 15em;
+                }
+
+          html{
+             background: url(/css/background.jpg) no-repeat center center fixed;          /*  for scaling background image  */
+              -webkit-background-size: cover;
+              -moz-background-size: cover;
+              -o-background-size: cover;
+              background-size: cover;
+              margin-left: 40px;
+              margin-right: 40px;
+              margin-bottom: 30px;
+          }
+			 .example::-webkit-scrollbar {
+			            display: none;
+			        }
+    </style>
+</head>
+<body>
+
+    <div class="progress" style="height: 55px; font-size: 20px; margin-top: 1.5rem;">
+        <div class="progress-bar bg-info" role="progressbar" style="width: 100%; color: #ffcc00; background-color: #003d66 !important;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Recent Booked Tickets</div>
+      </div>
+      <form method="POST" action="/modify2" class="form"
+      id="usrform">
+      <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead>
+            <tr class="table-primary">
+            <th scope="col" style="background-color: #ffcc00 !important; color: #003d66;">Train No</th>
+            <th scope="col" style="background-color: #ffcc00 !important; color: #003d66;">Name</th>
+            <th scope="col" style="background-color: #ffcc00 !important; color: #003d66;">Class</th>
+            <th scope="col" style="background-color: #ffcc00 !important; color: #003d66;">Seat No</th>
+          </tr>
+        </thead>
+        <tbody>
+            <% for(var i=0;i < pnrres.length; i++){ %>
+          <tr>
+            <td><%= pnrres[i].trainno %></td>
+            <td><%= pnrres[i].name %></td>
+            <td><%= pnrres[i].class %></td>
+            <td><%= pnrres[i].seat_no %></td>
+          </tr>
+          <% } %>
+        </tbody>
+      </table>
+
+      <div class="card offset-sm-3 col-6 col-md-4 ml-auto mr-auto mt-auto box"  style="width: 70%;margin-bottom:10px !important; padding: 0px 0px 0px 0px;">
+        <h2 style="align-content: center; text-align: center;margin-bottom: -0.7rem; color: black !important;" class="text-warning">Modify To</h2>
+        <hr style="height:2px;border-width:0;color:gray;background-color:gray;">
+        <div style="padding-left: 1rem; font-size: 18px; padding-right: 0.8rem;">
+            <div class="table-responsive" style="margin-bottom: 0.65rem;">
+            <table class="table table-bordered">
+                <tbody>
+                  <tr>
+                    <td style="color: white;">
+      <div class="form-label-group">  
+        <br> 
+         <select class="" aria-label="All Classes"  id="scripts" name="scripts">
+             
+             <!---->
+             <option class="Select" value='0'>
+                 Seat Number
+             </option>
+             <!----><!----><!----><!---->
+             <% for(var i=0;i < pnrres.length; i++){ %>
+             <option class="" value=<%= `${pnrres[i].seat_no}` %> >
+                <%= pnrres[i].seat_no %>
+             </option>
+             <% } %>
+             
+         </select>
+         </div>
+         </td>
+         <td><input type="number" id="lname" name="cseat" autocomplete="off">
+        </td>
+        </tr>
+        </tbody>
+        </table>
+     </div>
+
+      <button type="submit" class="button"  name="list"  >Modify</button>
+    </div>
+      </div>
+  </div>
+</form>
+
+  <%- include("partials/footer") -%>

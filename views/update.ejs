@@ -1,0 +1,69 @@
+<%- include("partials/header") -%>
+
+<link rel="icon" 
+      type="image/png" 
+      href="/css/logo.png" >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Ticket</title>
+
+    <link rel="stylesheet" href="/css/home.css">
+    <style>
+          .html1  { 
+          margin-top: 70px;
+          padding: 40px;
+          font-family: 'helvetica neue';
+          background-image: linear-gradient( to bottom right,orange,#241c82);
+          }
+
+          html{
+             background: url(/css/background.jpg) no-repeat center center fixed;          /*  for scaling background image  */
+              -webkit-background-size: cover;
+              -moz-background-size: cover;
+              -o-background-size: cover;
+              background-size: cover;
+              margin-left: 40px;
+              margin-right: 40px;
+              margin-bottom: 30px;
+          }
+			 .example::-webkit-scrollbar {
+			            display: none;
+			        }
+    </style>
+
+</head>
+<body>
+    <table class="table table-dark" style="margin-top: 82px !important;">
+        <thead>
+          <tr>
+            <th scope="col">Pnr</th>
+            <th scope="col">Train no</th>
+            <th scope="col">Current Seat</th>
+            <th scope="col">Modify To</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+            <form method="POST" action="/update" class="form">
+            <% for(var i=0;i < result.length; i++){ %>
+          <tr>
+            <td><%= result[i].pnr %></td>
+            <td><%= result[i].trainno %></td>
+            <td><%= result[i].curr_seat_no %></td>
+            <td><%= result[i].applied_seat_no %></td>
+            <td><button type="submit" name="list" class="btn btn-danger" value=<%= i %> >Update</button></td>
+          </tr>
+        
+          <% } %>
+        </form>
+        <tr>
+            <form method="POST" action="/reject" >
+            <td colspan="5"><button type="submit" name="rej" class="btn btn-danger" >Cancel</button></td>
+        </form>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+    <%- include("partials/footer") -%>
