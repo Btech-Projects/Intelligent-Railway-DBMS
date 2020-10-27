@@ -18,8 +18,8 @@ app.use(express.static("public"));
 var con = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "12345",
-  database : 'login',
+  password: "", //Enter Your Database Password
+  database : '', //Enter Your Database Name
   multipleStatements: true
 });
 
