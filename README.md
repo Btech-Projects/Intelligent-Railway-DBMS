@@ -2,18 +2,13 @@ SOFTWARES REQUIRED AND STEPS TO FOLLOW
 
 A)
     1) INSTALL AND RUN NODE JS
-    2) Installation of nodeJS and expo for AppDev (Windows users)
+    2) Installation of nodeJS (Windows users)
          Go to:https://nodejs.org/en/
     3) Open Command Prompt:
     4) Type: node –version
          If you are getting output v12.18.4 then your node js is correctly installed.
          If it’s not showing v12.18.4 then try to reinstall it.
-    5) Now after installation of Node JS in same window of command prompt
-         Type: npm install expo-cli –global
-         Ignore Warnings and allow your command prompt to install expo, it will take sometime and
-         after installing at the last expo-cli@3.27.12 will be displayed that means expo is installed
-         correctly, if it’s not showing try to reinstalled it again by typing the same command given
-         above
+   
          
 B)
     1) Install and run XAMPP and use MariaDB as the Rdbms
