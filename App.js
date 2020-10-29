@@ -18,8 +18,8 @@ app.use(express.static("public"));
 var con = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "", //Enter Your Database Password
-  database : '', //Enter Your Database Name
+  password: "12345",
+  database : 'login',
   multipleStatements: true
 });
 
@@ -72,12 +72,12 @@ app.get('/', function(req,res){
           res.render('home',{ruser: luser});
         })
       })
-      res.render('update',{result : result});
+      res.render('home',{ruser : luser});
     })
   })
 
   app.post('/reject', function(req,res){
-    let query3=`update modify_details set status='Rejected' where email='${luser}'`;
+    let query3=`update modify_details set status='Rejected' where email='${luser}' and status='Pending'`;
         con.query(query3, function(err){
           if(err) throw err;
           res.render('home',{ruser: luser});
@@ -169,7 +169,12 @@ app.post('/cancel', function(req,res){
           con.query(query3, (err, foundResult) => {
             if(err) console.log("failed1");
             else{
-            res.render('home',{ruser: luser});
+              let query4=`delete from pnr_details where pnr=${pnr};`;
+              con.query(query4, function(err){
+                if(err) throw err;
+                res.render('home',{ruser: luser});
+              })
+            
           }
         });
       }
