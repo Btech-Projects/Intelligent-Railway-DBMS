@@ -93,14 +93,21 @@ app.get('/', function(req,res){
   app.post('/book', function(req,res){
     var from = req.body.from;
     var to = req.body.to;
-    // con.connect(function(err) {
-    //   if (err) throw err;
+    var date=req.body.date;
+    console.log(date);
+     var today = new Date();
+     var today1 = new Date(date);
+    
+    if(today1>=today){
       con.query(`select * from classseats where sp='${from}' and dp='${to}'`, function (err, result) {
         if (err) throw err;
         result1= result;
         res.render('show',{result: result});
       });
-    // });
+    }
+    else{
+      res.render('book');
+    }
   } )
 
   app.post('/show', function(req,res){
@@ -110,7 +117,7 @@ app.get('/', function(req,res){
     let query='';
    if(seats===0){
      res.render('home',{ruser: luser});
-   }
+   }else{
     if(result1[i].seatsleft >= seats){
       stat = "Confirmed";
     }
@@ -132,7 +139,7 @@ app.get('/', function(req,res){
        res.render('passenger',{number: seats});
       }
     })
-    
+  }
     // res.render('passenger',{number: seats});
   })
 
