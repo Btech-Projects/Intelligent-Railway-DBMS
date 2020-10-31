@@ -29,7 +29,7 @@ insert into classseats (`trainno`, `sp`, `dp`, `doj`, `class`, `fare`, `seatslef
     (20, 'Delhi', 'Jaipur', '2015-05-09', 'AC3', 2700, 50),
 (20, 'Delhi', 'Jaipur', '2015-05-09', 'SL', 900, 300);
 
-create table ticket(pnr int auto_increment Primary Key,id int,trainno bigint,sp varchar(50),dp varchar(50), tfare bigint,class varchar(20),nos int,status varchar(50))engine=InnoDb Default CHARSET=latin1 AUTO_INCREMENT=61;
+create table ticket(pnr int auto_increment Primary Key,trainno bigint,sp varchar(50),dp varchar(50), tfare bigint,class varchar(20),nos int,status varchar(50))engine=InnoDb Default CHARSET=latin1 AUTO_INCREMENT=61;
 
 insert into ticket (`pnr`, `trainno`, `sp`, `dp`, `tfare`, `class`, `nos`, `status`) VALUES(51, 12, 'Chandigarh', 'Jaipur', 3300, 'AC1', 2, 'Confirmed'),
 (57, 12, 'Chandigarh', 'Jaipur', 2200, 'AC1', 1, 'WAITING');
