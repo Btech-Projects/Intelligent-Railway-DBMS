@@ -108,7 +108,9 @@ app.get('/', function(req,res){
     seats=parseInt(req.body.sit[i]);
     var stat = '';
     let query='';
-   
+   if(seats===0){
+     res.render('home',{ruser: luser});
+   }
     if(result1[i].seatsleft >= seats){
       stat = "Confirmed";
     }
@@ -126,7 +128,7 @@ app.get('/', function(req,res){
         if(stat === "WAITING"){
           res.render('home',{ruser:luser});
         }
-        alert("Booked");
+       
        res.render('passenger',{number: seats});
       }
     })
@@ -150,6 +152,7 @@ app.get('/', function(req,res){
         res.render('home',{ruser: luser});
       });
     });
+    alert("Booked");
     res.render('home',{ruser: luser});
   }) 
 
