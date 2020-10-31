@@ -1,4 +1,4 @@
-create table login(email varchar(255),password varchar(255))engine = innodb default charset =latin1;
+create table login(email varchar(255) Primary Key,password varchar(255))engine = innodb default charset =latin1;
 
 create table classseats(trainno bigint,sp varchar(50),dp varchar(50),doj date,class varchar(20),fare int,seatsleft int) ENGINE =InnoDB Default Charset=latin1;
 
