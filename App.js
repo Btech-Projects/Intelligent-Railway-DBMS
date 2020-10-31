@@ -107,26 +107,31 @@ app.get('/', function(req,res){
     let i = req.body.list;
     seats=parseInt(req.body.sit[i]);
     var stat = '';
+    let query='';
+   
     if(result1[i].seatsleft >= seats){
       stat = "Confirmed";
     }
     else{
       stat = "WAITING";
+      query+=`update classseats set seatsleft=${result1[i].seatsleft}+${i} where trainno=${result1[i].trainno} and sp='${result1[i].sp}' and dp='${result1[i].dp}' and fare=${result1[i].fare} and class='${result1[i].class}';`;
+      
     }
-    let query=`INSERT INTO ticket(trainno, sp, dp, tfare,class,nos,status) values('${result1[i].trainno}','${result1[i].sp}','${result1[i].dp}','${result1[i].fare}','${result1[i].class}','${seats}','${stat}');`;
-    con.query(query, (err) => {
+    query=`INSERT INTO ticket(trainno, sp, dp, tfare,class,nos,status) values('${result1[i].trainno}','${result1[i].sp}','${result1[i].dp}','${result1[i].fare}','${result1[i].class}','${seats}','${stat}');`;
+     con.query(query, (err) => {
       if(err){
         res.render('show',{result: result1});
       }
       else{
         if(stat === "WAITING"){
-          res.render('home');
+          res.render('home',{ruser:luser});
         }
+        alert("Booked");
        res.render('passenger',{number: seats});
       }
     })
-    alert("Booked");
-    res.render('passenger',{number: seats});
+    
+    // res.render('passenger',{number: seats});
   })
 
   app.post('/passenger', function(req,res){
@@ -154,47 +159,64 @@ app.get('/', function(req,res){
 
 app.post('/cancel', function(req,res){
   var pnr=req.body.pnr;
+  let query4=`select * from pnr_details where pnr=${pnr} and email='${luser}';`;
   let query=`select * from ticket where pnr=${pnr};`;
   let query3=`update ticket set status='Cancelled' where pnr=${pnr};`;
-  con.query(query, (err, foundResult) => {
+  con.query(query4, function(err,Result3){
     if(err) console.log(err);
     else{
-      var new1 =foundResult[0];
-      var query2=`UPDATE classseats SET seatsleft=seatsleft+${new1.nos} where trainno=${new1.trainno} and class='${new1.class}' and sp='${new1.sp}' and dp='${new1.dp}';`;
-      // let query2=`UPDATE classseats SET seatsleft=20 where trainno=${new1.trainno} AND class='${new1.class}' AND sp='${new1.sp}' AND dp='${new1.dp}';`;
-      console.log(query2);
-      con.query(query2, (err, foundResult2) => {
-        if(err) console.log(err);
-        else{
-          con.query(query3, (err, foundResult) => {
-            if(err) console.log("failed1");
-            else{
-              let query4=`delete from pnr_details where pnr=${pnr};`;
-              con.query(query4, function(err){
-                if(err) throw err;
-                res.render('home',{ruser: luser});
-              })
-            
+      if(Result3[0]){
+        con.query(query, (err, foundResult) => {
+          if(err) console.log(err);
+          else{
+            var new1 =foundResult[0];
+            var query2=`UPDATE classseats SET seatsleft=seatsleft+${new1.nos} where trainno=${new1.trainno} and class='${new1.class}' and sp='${new1.sp}' and dp='${new1.dp}';`;
+            // let query2=`UPDATE classseats SET seatsleft=20 where trainno=${new1.trainno} AND class='${new1.class}' AND sp='${new1.sp}' AND dp='${new1.dp}';`;
+            console.log(query2);
+            con.query(query2, (err, foundResult2) => {
+              if(err) console.log(err);
+              else{
+                con.query(query3, (err, foundResult) => {
+                  if(err) console.log("failed1");
+                  else{
+                    let query4=`delete from pnr_details where pnr=${pnr};`;
+                    con.query(query4, function(err){
+                      if(err) throw err;
+                      res.render('home',{ruser: luser});
+                    })
+                  
+                }
+              });
+            }
+            });
           }
-        });
-      }
+       
       });
+      }
+      else{
+        res.render('cancel');
+      }
     }
- 
-});
+  })
+  
 })
   
   app.get('/modify', function(req,res){
+    // let query=`select pnr from pnr_details where email='${luser}';`;
+    // con.query(query, function(err, result){
+    //   if(err) throw err;
+    //   res.render('modify',{result: result});
+    // })
     res.render('modify');
   })
   
   app.post('/modify', function(req,res){
     var pnr=req.body.pnr;
-  let query=`select * from pnr_details where pnr=${pnr};`;
+  let query=`select * from pnr_details where pnr=${pnr} and email='${luser}';`;
   con.query(query, (err, foundResult) => {
     if(err) console.log("failed1");
     else{
-        if (foundResult){
+        if (foundResult[0]){
           // console.log(foundResult);
           modify=foundResult[0];
             res.render('modify2',{pnrres: foundResult});
